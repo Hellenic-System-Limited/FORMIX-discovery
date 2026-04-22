@@ -1,0 +1,15 @@
+@101   Ingredient Editor
+.001Reference used to identify this ingredient
+.002A Description of the Ingredient
+.003Ingredient is usually weighed
+.004Ingredient is usually just a Process Step
+.005Standard weights are usually counted into the mix
+.006User usually just confirms calculated weight
+.007Used to calculate mimimum Weight required by Mix
+.009Used to calculate maximum weight allowed in Mix
+.011Yield Of Ingredient through mixing
+.013Specific Gravity Of Ingredient
+.014Hazard Code For The Ingredient
+.016Base Cost Of The Ingredient
+.017Instruction displayed to the User when adding to mix
+.018Instruction displayed to the User when adding to mix

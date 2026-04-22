@@ -1,0 +1,51 @@
+ ~                             RECIPE ORDER EDITOR                              ~
+ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+³ ^Order:^ [      /  ]   Recipe: [        ]   Date: [          ]   Release: [   ]³
+ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+$IFDEFINE BATCHES
+³ Batches Required : [    ]           ³ Mixes Required  :                      ³
+³ Standard Batch Wt: [         ]      ³ Mixes Done      :                      ³
+$ELSE
+³ Num. &units_     : [    ]           ³ Mixes Required  :                      ³
+³ Std. &unit Wt.   : [         ]      ³ Mixes Done      :                      ³
+$ENDIF
+³ Finish Wt. Reqd. : [         ]kg    ³ Expected Wt Loss:                      ³
+³ Maximum Mix Wt.  : [         ]kg    ³ Process Weight  :                      ³
+$ENDIF
+ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+³ Status   : [    ]         Work Group: [   ]        Fixed Sequence : [ ]      ³
+³ Mix Type :                                                                   ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+ ~                      Mix %   Container  Weighings     Weight     Weight      ~
+ ~ Line Ingredient Key  Ratio   Size       Req.  Done   Required  Completed     ~
+
+
+
+
+
+
+
+
+
+ ~ F4 - Insert Ingredient     F5/F6  -Move Ingredient Up/Down   F7 -Extra Detail~
+ ~ F3 - Key Ingredient On/Off F10 - Abandon Order Edit    ESC - Done            ~
+@01,10,03,08,01, ORDER REF
+@02,32,03,08,01, RECIPIE CODE
+@03,51,03,08,00, SCHEDULE DATE
+@04,75,03,03,00, Release
+@05,22,05,04,00, Number OF CASES
+@06,22,06,09,00, STANDARD CASE WEIGHT
+@07,22,07,09,00, TARGET WEIGHT
+@08,22,08,09,00, MIX BATCH WEIGHT
+@09,14,10,04,00, STATUS
+@10,41,10,03,00  Work Group
+@11,71,10,01,00, FIXED SEQUENCE
+@12,14,11,01,00, MIX TYPE
+@13,60,05,03,01, MIXES REQUIRED
+@14,60,06,03,01, MIXES DONE
+@15,60,08,09,01, Gross Weight
+@16,60,07,09,01, LOSS WEIGHT
+@17,24,03,07,00, Custom_Alpha1  page2
+@18,24,04,04,00, Custom_Num1    page2
+@19,24,05,03,00, Release        page2 (repeated from page1)
+@20,24,06,10,00, Custom_Alpha2  page2

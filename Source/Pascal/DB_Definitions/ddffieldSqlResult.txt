@@ -1,0 +1,511 @@
+<<<<<<<<<<<<<<<<<<<<<<<<
+Xf$Name                Xe$Offset   Xe$Name                Xe$DataType   Xe$Size
+====================   =========   ====================   ===========   =======
+Ingred_Usage                   0   Ingredient                       0         8
+Ingred_Usage                   8   Date_Used                        1         4
+Ingred_Usage                  12   Net_Wt                           2         8
+Ingred_Usage                  20   Batch_No                         0         6
+Ingred_Usage                  26   Lot_No                           0        14
+Ingred_Usage                  36   NN_Ingredient                  227         0
+Ingred_Usage                  38   NN_Date                        227         0
+Ingred_Usage                  40   NN_Net_Wt                      227         0
+Ingred_Usage                  40   Trans_Count                      1         4
+Ingred_Usage                  42   NN_Batch_No                    227         0
+Ingred_Usage                  44   NN_Lot_No                      227         0
+Ingred_Usage                  44   Reserved                         0         9
+Ingred_Usage                  46   NN_Trans_Count                 227         0
+Ingredients                    0   Ingredient                      10         9
+Ingredients                    9   Description                     10        31
+Ingredients                   40   Process_Type                    14         1
+Ingredients                   41   Tol_NegPercent                   2         8
+Ingredients                   49   Tol_PosPercent                   2         8
+Ingredients                   57   Specif_Gravity                   2         8
+Ingredients                   65   Hazard_Code                      0         1
+Ingredients                   66   Reserved1                        0         1
+Ingredients                   67   Cost                             2         8
+Ingredients                   75   Instruction1                    10        31
+Ingredients                  106   Instruction2                    10        31
+Ingredients                  137   Mixing_Yield                     2         8
+Ingredients                  145   Reserved2                        0         4
+Ingredients                  149   Standard_Wt                      2         8
+Ingredients                  157   No_Tare                         16         1
+Ingredients                  158   Container_Wt                     2         8
+Ingredients                  166   Prep_Area                       10         9
+Ingredients                  175   Reserved                         0        62
+Ingredients                  357   NN_Ingredient                  227         0
+Ingredients                  359   NN_Description                 227         0
+Ingredients                  361   NN_Process_Type                227         0
+Ingredients                  363   NN_Tol_NegPercent              227         0
+Ingredients                  365   NN_Tol_PosPercent              227         0
+Ingredients                  367   NN_Specif_Gravity              227         0
+Ingredients                  369   NN_Hazard_Code                 227         0
+Ingredients                  371   NN_Reserved1                   227         0
+Ingredients                  373   NN_Cost                        227         0
+Ingredients                  375   NN_Instruction1                227         0
+Ingredients                  377   NN_Instruction2                227         0
+Ingredients                  379   NN_Mixing_Yield                227         0
+Ingredients                  381   NN_Reserved2                   227         0
+Ingredients                  383   NN_Standard_Wt                 227         0
+Ingredients                  386   NN_Container_Wt                227         0
+Ingredients                  388   NN_Prep_Area                   227         0
+Ingredients                  390   NN_Reserved                    227         0
+LotCost                        0   Ingredient                       0         8
+LotCost                        8   Lot_No                           0        14
+LotCost                       19   NN_Ingredient                  227         0
+LotCost                       21   NN_LotNo                       227         0
+LotCost                       22   Cost                             2         8
+LotCost                       23   NN_Cost                        227         0
+LotCost                       25   NN_WeightIn                    227         0
+LotCost                       27   NN_WeightUsed                  227         0
+LotCost                       29   NN_Free1                       227         0
+LotCost                       30   WeightIn                         2         8
+LotCost                       31   NN_WeightWasted                227         0
+LotCost                       33   NN_Reserved                    227         0
+LotCost                       38   WeightUsed                       2         8
+LotCost                       46   Free1                            0         8
+LotCost                       54   WeightWasted                     2         8
+LotCost                       62   Reserved                         0        12
+LotIRef                        0   Ingredient                       0         8
+LotIRef                        8   MachineID                        1         2
+LotIRef                       10   Lot_No                           0        14
+Mix_Total                      0   Order_No                         1         4
+Mix_Total                      4   Order_No_Suffix                 14         1
+Mix_Total                      5   Mix_No                           1         2
+Mix_Total                      7   Complete                        16         1
+Mix_Total                      8   Weight_Reqd                      2         8
+Mix_Total                     16   Weight_Done                      2         8
+Mix_Total                     24   QA_Complete                     16         1
+Mix_Total                     24   Meat_QA_done                    16         1
+Mix_Total                     24   Seasoning_QA_done               16         1
+Mix_Total                     24   Water_QA_done                   16         1
+Mix_Total                     25   Reserved                         0         7
+Order_Header                   0   Order_No                         1         4
+Order_Header                   4   Order_No_Suffix                 14         1
+Order_Header                   5   Recipe_No                       10         9
+Order_Header                  14   Schedule_Date                    1         4
+Order_Header                  18   Status                          14         1
+Order_Header                  19   Mix_Method                      14         1
+Order_Header                  20   Finish_Wt_Reqd                   2         8
+Order_Header                  28   Max_Mix_Wt                       2         8
+Order_Header                  36   Work_Group                      10         4
+Order_Header                  40   Reserved1                        0         4
+Order_Header                  44   Mixes_Done                      14         2
+Order_Header                  46   Reserved2                        0         8
+Order_Header                  54   Reserved3                        0         8
+Order_Header                  62   Fixed_Sequence                  16         1
+Order_Header                  63   Updates                          1         4
+Order_Header                  67   No_Of_Batches                    1         4
+Order_Header                  71   Std_Batch_Wt                     2         8
+Order_Header                  79   Work_To_Batches                 16         1
+Order_Header                  80   Tot_Weight_Reqd                  2         8
+Order_Header                  88   Current_Mix                     14         2
+Order_Header                  90   Mixes_Reqd                      14         2
+Order_Header                  92   Tot_Weight_Done                  2         8
+Order_Header                 100   AutoBatchOffset                  1         4
+Order_Header                 104   Reserved                         0        30
+Order_Header                 270   NN_Order_No                    227         0
+Order_Header                 272   NN_Order_No_Suffix             227         0
+Order_Header                 274   NN_Recipe_No                   227         0
+Order_Header                 276   NN_Schedule_Date               227         0
+Order_Header                 278   NN_Status                      227         0
+Order_Header                 280   NN_Mix_Method                  227         0
+Order_Header                 282   NN_Finish_Wt_Reqd              227         0
+Order_Header                 284   NN_Max_Mix_Wt                  227         0
+Order_Header                 286   NN_Reserved1                   227         0
+Order_Header                 288   NN_Mixes_Done                  227         0
+Order_Header                 290   NN_Reserved2                   227         0
+Order_Header                 292   NN_Reserved3                   227         0
+Order_Header                 295   NN_Updates                     227         0
+Order_Header                 297   NN_No_Of_Batches               227         0
+Order_Header                 299   NN_Std_Batch_Wt                227         0
+Order_Header                 302   NN_Tot_Weight_Reqd             227         0
+Order_Header                 304   NN_Current_Mix                 227         0
+Order_Header                 306   NN_Mixes_Reqd                  227         0
+Order_Header                 308   NN_Tot_Weight_Done             227         0
+Order_Header                 310   NN_AutoBatchOffset             227         0
+Order_Header                 312   NN_Reserved                    227         0
+Order_Line                     0   FileRef                          1         4
+Order_Line                     4   Order_No                         1         4
+Order_Line                     8   Order_No_Suffix                 14         1
+Order_Line                     9   Line_No                          1         4
+Order_Line                    13   Ingredient                      10         9
+Order_Line                    22   Key_Line                        16         1
+Order_Line                    23   Final_Percent                    2         8
+Order_Line                    31   Container_Wt                     2         8
+Order_Line                    39   Reserved1                        0         2
+Order_Line                    41   Reserved2                        0         8
+Order_Line                    49   Tol_NegPercent                   2         8
+Order_Line                    57   Tol_PosPercent                   2         8
+Order_Line                    65   Spec_Instruct1                  10        31
+Order_Line                    96   Spec_Instruct2                  10        31
+Order_Line                   127   Tot_Weight_Done                  2         8
+Order_Line                   135   Tot_Trans_Done                  14         2
+Order_Line                   137   Mixing_Yield                     2         8
+Order_Line                   145   Process_Type                    14         1
+Order_Line                   146   Fixed_Weight                     2         8
+Order_Line                   154   Reserved                         0        13
+Order_Line                   316   NN_FileRef                     227         0
+Order_Line                   318   NN_Order_No                    227         0
+Order_Line                   320   NN_Order_No_Suffix             227         0
+Order_Line                   322   NN_Line_No                     227         0
+Order_Line                   324   NN_Ingredient                  227         0
+Order_Line                   327   NN_Final_Percent               227         0
+Order_Line                   329   NN_Container_Wt                227         0
+Order_Line                   331   NN_Reserved1                   227         0
+Order_Line                   333   NN_Reserved2                   227         0
+Order_Line                   335   NN_Tol_NegPercent              227         0
+Order_Line                   337   NN_Tol_PosPercent              227         0
+Order_Line                   339   NN_Spec_Instruct1              227         0
+Order_Line                   341   NN_Spec_Instruct2              227         0
+Order_Line                   343   NN_Tot_Weight_Done             227         0
+Order_Line                   345   NN_Tot_Trans_Done              227         0
+Order_Line                   347   NN_Mixing_Yield                227         0
+Order_Line                   349   NN_Process_Type                227         0
+Order_Line                   351   NN_Fixed_Weight                227         0
+Order_Line                   353   NN_Reserved                    227         0
+Prod_Header                    0   Product_Code                    10        11
+Prod_Header                   11   Description                     10        31
+Prod_Header                   42   Updates                          1         4
+Prod_Header                   46   No_Of_Methods                    1         2
+Prod_Header                   48   Case_Weight                      2         8
+Prod_Header                   56   Reserved                         0        56
+Prod_Header                  226   NN_Product_Code                227         0
+Prod_Header                  228   NN_Description                 227         0
+Prod_Header                  230   NN_Updates                     227         0
+Prod_Header                  232   NN_No_Of_Methods               227         0
+Prod_Header                  234   NN_Case_Weight                 227         0
+Prod_Header                  236   NN_Reserved                    227         0
+Prod_Instructions              0   Product_Code                    10        11
+Prod_Instructions             11   Method_Line_No                   1         2
+Prod_Instructions             13   Product_Method                   1         2
+Prod_Instructions             15   Description                     10        41
+Prod_Instructions             56   Reserved                         0        64
+Prod_Instructions            215   NN_Product_Code                227         0
+Prod_Instructions            217   NN_Method_Line_No              227         0
+Prod_Instructions            219   NN_Product_Method              227         0
+Prod_Instructions            221   NN_Description                 227         0
+Prod_Instructions            223   NN_Reserved                    227         0
+Prod_Line                      0   Product_Code                    10        11
+Prod_Line                     11   Line_No                          1         2
+Prod_Line                     13   Recipe_Code                     10         9
+Prod_Line                     22   Percentage                       2         8
+Prod_Line                     30   Sub_Product                     10        11
+Prod_Line                     41   Reserved                         0        53
+Prod_Line                    239   NN_Product_Code                227         0
+Prod_Line                    241   NN_Line_No                     227         0
+Prod_Line                    243   NN_Recipe_Code                 227         0
+Prod_Line                    245   NN_Percentage                  227         0
+Prod_Line                    247   NN_Sub_Product                 227         0
+Prod_Line                    249   NN_Reserved                    227         0
+Prod_Schedule                  0   Order_No                         1         4
+Prod_Schedule                  4   Schedule_Date                    1         4
+Prod_Schedule                  8   Product_Code                    10        11
+Prod_Schedule                 19   No_Of_Orders                    14         2
+Prod_Schedule                 21   Product_Method                   1         2
+Prod_Schedule                 23   Weight_Reqd                      2         8
+Prod_Schedule                 31   Cases_Reqd                       1         4
+Prod_Schedule                 35   Reserved                         0        60
+Prod_Schedule                252   NN_Order_No                    227         0
+Prod_Schedule                254   NN_Schedule_Date               227         0
+Prod_Schedule                256   NN_Product_Code                227         0
+Prod_Schedule                258   NN_No_Of_Orders                227         0
+Prod_Schedule                260   NN_Product_Method              227         0
+Prod_Schedule                262   NN_Weight_Reqd                 227         0
+Prod_Schedule                264   NN_Cases_Reqd                  227         0
+Prod_Schedule                266   NN_Reserved                    227         0
+Recipe_Header                  0   FileRef                          1         4
+Recipe_Header                  4   Recipe_Code                     10         9
+Recipe_Header                 13   Description                     10        31
+Recipe_Header                 44   Mix_Method                      14         1
+Recipe_Header                 45   Mix_Weight                       2         8
+Recipe_Header                 53   Reserved1                        2         8
+Recipe_Header                 61   Reserved2                        2         8
+Recipe_Header                 69   Updates                          1         4
+Recipe_Header                 73   Batch_Weight                     2         8
+Recipe_Header                 81   PostMix_Loss                     2         8
+Recipe_Header                 89   Reorder_Level                    1         4
+Recipe_Header                 93   Issue                           10         9
+Recipe_Header                102   BarCode                         10        15
+Recipe_Header                117   Fixed_Sequence                  16         1
+Recipe_Header                118   Reserved3                       14         1
+Recipe_Header                119   Work_Group                       0         3
+Recipe_Header                122   Job_Number                       1         2
+Recipe_Header                124   Reserved                         0        14
+Recipe_Header                153   NN_FileRef                     227         0
+Recipe_Header                155   NN_Recipe_Code                 227         0
+Recipe_Header                157   NN_Description                 227         0
+Recipe_Header                159   NN_Mix_Method                  227         0
+Recipe_Header                161   NN_Mix_Weight                  227         0
+Recipe_Header                163   NN_Reserved1                   227         0
+Recipe_Header                165   NN_Reserved2                   227         0
+Recipe_Header                167   NN_Updates                     227         0
+Recipe_Header                169   NN_Batch_Weight                227         0
+Recipe_Header                171   NN_PostMix_Loss                227         0
+Recipe_Header                173   NN_Reorder_Level               227         0
+Recipe_Header                175   NN_Issue                       227         0
+Recipe_Header                177   NN_BarCode                     227         0
+Recipe_Header                541   NN_Reserved3                   227         0
+Recipe_Header                543   NN_Work_Group                  227         0
+Recipe_Header                545   NN_Job_Number                  227         0
+Recipe_Header                547   NN_Reserved                    227         0
+Recipe_Line                    0   FileRef                          1         4
+Recipe_Line                    4   Recipe_Code                     10         9
+Recipe_Line                   13   Line_No                          1         4
+Recipe_Line                   17   HeaderFileRef                    1         4
+Recipe_Line                   21   Ingredient                      10         9
+Recipe_Line                   30   Key_Line                        16         1
+Recipe_Line                   31   Final_Percent                    2         8
+Recipe_Line                   39   Container_Wt                     2         8
+Recipe_Line                   47   Mixing_Yield                     2         8
+Recipe_Line                   55   Reserved1                        2         8
+Recipe_Line                   63   Tol_NegPercent                   2         8
+Recipe_Line                   71   Tol_PosPercent                   2         8
+Recipe_Line                   79   Reserved                         0        32
+Recipe_Line                  184   NN_FileRef                     227         0
+Recipe_Line                  186   NN_Recipe_Code                 227         0
+Recipe_Line                  188   NN_Line_No                     227         0
+Recipe_Line                  190   NN_HeaderFileRef               227         0
+Recipe_Line                  192   NN_Ingredient                  227         0
+Recipe_Line                  195   NN_Final_Percent               227         0
+Recipe_Line                  197   NN_Container_Wt                227         0
+Recipe_Line                  199   NN_Mixing_Yield                227         0
+Recipe_Line                  201   NN_Reserved1                   227         0
+Recipe_Line                  203   NN_Tol_NegPercent              227         0
+Recipe_Line                  205   NN_Tol_PosPercent              227         0
+Recipe_Line                  207   NN_Reserved                    227         0
+REGISTRY                       0   TagName                          0       191
+REGISTRY                     192   Value                            0       255
+REGISTRY                     444   NN_TagName                     227         0
+REGISTRY                     447   FolderName                       0        64
+REGISTRY                     447   NN_FolderName                  227         0
+SOURCE_CODES                   0   ID                              15         4
+SOURCE_CODES                   4   Code                            11        61
+SOURCE_CODES                  65   Type                             0         8
+SOURCE_CODES                  73   Reserved                         0        20
+StockTable                     0   Product                         10         8
+StockTable                     8   InStock                          1         4
+StockTable                    12   Weight                           2         8
+StockTable                    20   Initial                          1         4
+StockTable                    24   InitWt                           2         8
+StockTable                    32   ReservedSpace                    0        40
+Trans_Warnings                 0   MC_ID                           14         2
+Trans_Warnings                 2   Serial_No                        1         4
+Trans_Warnings                 6   Reserved1                       14         1
+Trans_Warnings                 7   Warning                          0       160
+Trans_Warnings               167   SrcConcessionNo                  1         4
+Trans_Warnings               171   Reserved                         0        16
+Transactions                   0   Reserved1                       14         1
+Transactions                   1   Ingredient                       0         8
+Transactions                   9   Order_No                         1         4
+Transactions                  13   Reserved2                       14         1
+Transactions                  14   Recipe_No                        0         8
+Transactions                  22   MC_ID                           14         2
+Transactions                  24   Serial_No                        1         4
+Transactions                  28   Reserved3                       14         1
+Transactions                  29   Trans_Time                       0         5
+Transactions                  34   Trans_Date                       1         4
+Transactions                  38   Order_Line_No                    1         4
+Transactions                  42   Reserved4                        0         1
+Transactions                  43   Weight_In_Mix                    2         8
+Transactions                  51   Reserved5                       14         1
+Transactions                  52   Batch_No                         0         6
+Transactions                  58   Reserved6                       14         1
+Transactions                  59   Lot_No                           0        14
+Transactions                  73   Container_No                     1         2
+Transactions                  75   Mix_No                          14         2
+Transactions                  77   Status                          14         2
+Transactions                  79   Order_No_Suffix                 14         1
+Transactions                  80   TempChecked                     14         1
+Transactions                  81   User_ID                          0         8
+Transactions                  89   Calc_Post_Mix_Wt                 2         8
+Transactions                  97   Weight_on_Scale                  2         8
+Transactions                 105   Source_code_id                   1         4
+Transactions                 109   Temperature                      2         8
+UserTable                      0   UserName                        10         9
+UserTable                      9   FullName                        10        31
+UserTable                     40   Pass                            10         9
+UserTable                     49   AccessLevel                      1         4
+UserTable                     53   ReservedSpace                    0        27
+X$Attrib                       0   Xa$Id                           14         2
+X$Attrib                       2   Xa$Type                          0         1
+X$Attrib                       3   Xa$ASize                        14         2
+X$Attrib                       5   Xa$Attrs                        12      2048
+X$Field                        0   Xe$Id                           14         2
+X$Field                        2   Xe$File                         14         2
+X$Field                        4   Xe$Name                          0        20
+X$Field                       24   Xe$DataType                     14         1
+X$Field                       25   Xe$Offset                       14         2
+X$Field                       27   Xe$Size                         14         2
+X$Field                       29   Xe$Dec                          14         1
+X$Field                       30   Xe$Flags                        14         2
+X$File                         0   Xf$Id                           14         2
+X$File                         2   Xf$Name                          0        20
+X$File                        22   Xf$Loc                           0        64
+X$File                        86   Xf$Flags                        14         1
+X$File                        87   Xf$Reserved                      0        10
+X$Index                        0   Xi$File                         14         2
+X$Index                        2   Xi$Field                        14         2
+X$Index                        4   Xi$Number                       14         2
+X$Index                        6   Xi$Part                         14         2
+X$Index                        8   Xi$Flags                        14         2
+X$Occurs                       0   Xo$FileId                       14         2
+X$Occurs                       2   Xo$ParentId                     14         2
+X$Occurs                       4   Xo$Length                       14         2
+X$Occurs                       6   Xo$Offset                       14         2
+X$Occurs                       8   Xo$Count                        14         2
+X$Occurs                      10   Xo$MappingIndex                 14         2
+X$Occurs                      12   Xo$Flags                        14         2
+X$Proc                         0   Xp$Name                          0        30
+X$Proc                        30   Xp$Ver                          14         1
+X$Proc                        31   Xp$Id                           14         2
+X$Proc                        33   Xp$Flags                        14         1
+X$Proc                        34   Xp$Misc                         13       990
+X$Relate                       0   Xr$PId                          14         2
+X$Relate                       2   Xr$Index                        14         2
+X$Relate                       4   Xr$FId                          14         2
+X$Relate                       6   Xr$FIndex                       14         2
+X$Relate                       8   Xr$Name                          0        20
+X$Relate                      28   Xr$UpdateRule                   14         1
+X$Relate                      29   Xr$DeleteRule                   14         1
+X$Relate                      30   Xr$Reserved                      0        30
+X$Rights                       0   Xr$User                         14         2
+X$Rights                       2   Xr$Table                        14         2
+X$Rights                       4   Xr$Column                       14         2
+X$Rights                       6   Xr$Rights                       14         1
+X$Trigger                      0   Xt$Name                          0        30
+X$Trigger                     30   Xt$Version                      14         1
+X$Trigger                     31   Xt$File                         14         2
+X$Trigger                     33   Xt$Event                        14         1
+X$Trigger                     34   Xt$ActionTime                   14         1
+X$Trigger                     35   Xt$ForEach                      14         1
+X$Trigger                     36   Xt$Order                        14         2
+X$Trigger                     38   Xt$Sequence                     14         2
+X$Trigger                     40   Xt$Misc                         13      4054
+X$User                         0   Xu$Id                           14         2
+X$User                         2   Xu$Name                          0        30
+X$User                        32   Xu$Password                      0         9
+X$User                        41   Xu$Flags                        14         2
+X$Variant                      0   Xvar$FileId                     14         2
+X$Variant                      2   Xvar$Pdf                         0       255
+X$View                         0   Xv$Name                          0        20
+X$View                        20   Xv$Version                      14         1
+X$View                        21   Xv$Id                           14         1
+X$View                        22   Xv$Misc                         13      2000
+
+390 rows were affected.
+
+>>>>>>>>>>>>>>>>>>>>>>>>
+
+<<<<<<<<<<<<<<<<<<<<<<<<
+Xf$Name                Xi$Number   Xi$Part   Xi$Flags   Key Name               Xe$Name             
+====================   =========   =======   ========   ====================   ====================
+Ingred_Usage                   0         0        400   ByDateBatLotIngred     Date_Used           
+Ingred_Usage                   0         1        400   ByDateBatLotIngred     Batch_No            
+Ingred_Usage                   0         2        400   ByDateBatLotIngred     Lot_No              
+Ingred_Usage                   0         3        384   ByDateBatLotIngred     Ingredient          
+Ingredients                    0         0        386   ByIngredient           Ingredient          
+LotCost                        0         0        400   ByIngredientLot        Ingredient          
+LotCost                        0         1        384   ByIngredientLot        Lot_No              
+LotIRef                        0         0        400   ByIngredientMID        Ingredient          
+LotIRef                        0         1        384   ByIngredientMID        MachineID           
+Mix_Total                      0         0        400   ByOrderMix             Order_No            
+Mix_Total                      0         1        400   ByOrderMix             Order_No_Suffix     
+Mix_Total                      0         2        384   ByOrderMix             Mix_No              
+Order_Header                   0         0        402   ByDateOrder            Schedule_Date       
+Order_Header                   0         1        402   ByDateOrder            Order_No            
+Order_Header                   0         2        386   ByDateOrder            Order_No_Suffix     
+Order_Header                   1         0        402   ByOrder                Order_No            
+Order_Header                   1         1        386   ByOrder                Order_No_Suffix     
+Order_Line                     0         0        402   ByOrderLine            Order_No            
+Order_Line                     0         1        402   ByOrderLine            Order_No_Suffix     
+Order_Line                     0         2        386   ByOrderLine            Line_No             
+Order_Line                     1         0        384   ByFileRef              FileRef             
+Prod_Header                    0         0        384   ByProd                 Product_Code        
+Prod_Instructions              0         0        400   ByProdMethodLine       Product_Code        
+Prod_Instructions              0         1        400   ByProdMethodLine       Product_Method      
+Prod_Instructions              0         2        384   ByProdMethodLine       Method_Line_No      
+Prod_Line                      0         0        402   ByProdLine             Product_Code        
+Prod_Line                      0         1        386   ByProdLine             Line_No             
+Prod_Schedule                  0         0        400   ByDateOrder            Schedule_Date       
+Prod_Schedule                  0         1        384   ByDateOrder            Order_No            
+Prod_Schedule                  1         0        384   ByOrder                Order_No            
+Recipe_Header                  0         0        386   ByCode                 Recipe_Code         
+Recipe_Header                  1         0        384   ByFileRef              FileRef             
+Recipe_Line                    0         0        403   ByHeadRefLine          HeaderFileRef       
+Recipe_Line                    0         1        387   ByHeadRefLine          Line_No             
+Recipe_Line                    1         0        384   ByFileRef              FileRef             
+REGISTRY                       0         0        402   PK_FolderName          FolderName          
+REGISTRY                       0         1        386   PK_FolderName          TagName             
+SOURCE_CODES                   0         0        386   UK_ID                  ID                  
+SOURCE_CODES                   1         0        402   ByCodeType             Code                
+SOURCE_CODES                   1         1        386   ByCodeType             Type                
+StockTable                     0         0        386   ByProduct              Product             
+Trans_Warnings                 0         0        273   ById                   MC_ID               
+Trans_Warnings                 0         1        257   ById                   Serial_No           
+Trans_Warnings                 1         0        259   BySrcconcess           SrcConcessionNo     
+Transactions                   0         0        401   ByDateOrder            Trans_Date          
+Transactions                   0         1        401   ByDateOrder            Order_No            
+Transactions                   0         2        385   ByDateOrder            Order_No_Suffix     
+Transactions                   1         0        400   ById                   MC_ID               
+Transactions                   1         1        384   ById                   Serial_No           
+Transactions                   2         0        401   ByOrderMixLine         Order_No            
+Transactions                   2         1        401   ByOrderMixLine         Order_No_Suffix     
+Transactions                   2         2        401   ByOrderMixLine         Mix_No              
+Transactions                   2         3        385   ByOrderMixLine         Order_Line_No       
+UserTable                      0         0        386   ByUser                 UserName            
+X$Attrib                       0         0        272   (Null)                 Xa$Id               
+X$Attrib                       0         1        256   (Null)                 Xa$Type             
+X$Field                        0         0        256   (Null)                 Xe$Id               
+X$Field                        1         0        257   (Null)                 Xe$File             
+X$Field                        2         0        291   (Null)                 Xe$Name             
+X$Field                        3         0        274   (Null)                 Xe$File             
+X$Field                        3         1        290   (Null)                 Xe$Name             
+X$Field                        4         0        275   (Null)                 Xe$File             
+X$Field                        4         1        275   (Null)                 Xe$Offset           
+X$Field                        4         2        259   (Null)                 Xe$Dec              
+X$File                         0         0        256   (Null)                 Xf$Id               
+X$File                         1         0        290   (Null)                 Xf$Name             
+X$Index                        0         0        257   (Null)                 Xi$File             
+X$Index                        1         0        257   (Null)                 Xi$Field            
+X$Index                        2         0        274   (Null)                 Xi$File             
+X$Index                        2         1        274   (Null)                 Xi$Number           
+X$Index                        2         2        258   (Null)                 Xi$Part             
+X$Occurs                       0         0        256   (Null)                 Xo$FileId           
+X$Proc                         0         0        306   (Null)                 Xp$Name             
+X$Proc                         0         1        258   (Null)                 Xp$Id               
+X$Relate                       0         0        257   (Null)                 Xr$PId              
+X$Relate                       1         0        257   (Null)                 Xr$FId              
+X$Relate                       2         0        290   (Null)                 Xr$Name             
+X$Relate                       3         0        274   (Null)                 Xr$PId              
+X$Relate                       3         1        290   (Null)                 Xr$Name             
+X$Relate                       4         0        274   (Null)                 Xr$FId              
+X$Relate                       4         1        290   (Null)                 Xr$Name             
+X$Rights                       0         0        259   (Null)                 Xr$User             
+X$Rights                       1         0        274   (Null)                 Xr$User             
+X$Rights                       1         1        274   (Null)                 Xr$Table            
+X$Rights                       1         2        258   (Null)                 Xr$Column           
+X$Rights                       2         0        275   (Null)                 Xr$Table            
+X$Rights                       2         1        259   (Null)                 Xr$Column           
+X$Trigger                      0         0        306   (Null)                 Xt$Name             
+X$Trigger                      0         1        258   (Null)                 Xt$Sequence         
+X$Trigger                      1         0        274   (Null)                 Xt$File             
+X$Trigger                      1         1        306   (Null)                 Xt$Name             
+X$Trigger                      1         2        258   (Null)                 Xt$Sequence         
+X$Trigger                      2         0        275   (Null)                 Xt$File             
+X$Trigger                      2         1        275   (Null)                 Xt$Event            
+X$Trigger                      2         2        275   (Null)                 Xt$ActionTime       
+X$Trigger                      2         3        275   (Null)                 Xt$ForEach          
+X$Trigger                      2         4        275   (Null)                 Xt$Order            
+X$Trigger                      2         5        259   (Null)                 Xt$Sequence         
+X$User                         0         0        259   (Null)                 Xu$Id               
+X$User                         1         0        290   (Null)                 Xu$Name             
+X$Variant                      0         0        256   (Null)                 Xvar$FileId         
+X$View                         0         0        291   (Null)                 Xv$Name             
+X$View                         1         0        306   (Null)                 Xv$Name             
+X$View                         1         1        274   (Null)                 Xv$Version          
+X$View                         1         2        258   (Null)                 Xv$Id               
+
+105 rows were affected.
+
+>>>>>>>>>>>>>>>>>>>>>>>>
+

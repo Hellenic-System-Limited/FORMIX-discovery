@@ -1,0 +1,6 @@
+# For more information https://help.github.com/en/articles/about-code-owners
+
+# These owners will be the default owners for everything in
+# the repo. Unless a later match takes precedence, owners will be requested for
+# review when someone opens a pull request.
+* @TBellHellenic

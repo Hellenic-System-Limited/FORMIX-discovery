@@ -1,0 +1,585 @@
+@101   Ingredient Editor
+  When selected this option displays a list of ingredients currently stored
+in the database. This list can be scrolled up and down by using the CURSOR UP,
+CURSOR DOWN, PAGE UP, and PAGE DOWN KEYS.
+  As the list is scrolled using these keys a highlight bar will be moved up
+and down through the list. When an ingredient is being highlighted by this bar
+the ENTER key can be used to edit the ingredient. Pressing the INSERT key will
+allow the entering of a new Ingredient.
+  Pressing the DELETE key over a highlighted ingredient will delete that
+ingredient from the database. If this option is selected the user is asked to
+confirm the deletion request by pressing the Y key, pressing either the ESC
+key or the N key will abort the deletion.
+
+#EDITING AN INGREDIENT
+
+  The table below shows the fields editable from the ingredient editor, and
+the fields usage.
+
+
+ FIELD NAME         DESCRIPTION
+ ----------         -----------
+ Ingredient Code    Used To identify the ingredient. This ingredient Code is
+                    used throughout the recipe system as a reference to the
+                    ingredients details.
+ Description        A description of the ingredient. This is showed on the
+                    ingredient browsers to help with identification of the
+                    ingredients.
+ Process Type       The ingredients process type. The types available are
+                    @WEIGHT - The ingredient must be weighed into a container
+                    an only after a certain amount of the ingredient has been
+                    weighed will the ingredient will be complete for a mix.
+                    The majority of ingredients will be WEIGHT ingredients.
+                    @STEP -  The Ingredient will be placed once into a
+                    container the weight of the ingredient placed into the
+                    container is not actually measured. This type of process
+                    is designed for when the amount of ingredient required is
+                    not needed, or is very small. Usefull for seasoning
+                    ingredients. NB STEP ingredients do not use tolerances.
+ Low Tolerance      The percentage that an ingredient can go under the amount
+                    required for one container, i.e. the minimum amount that
+                    can be placed in a container. E.G. if a container requires
+                    10 kg and the low tolerance is 50% a minimum of 5 kg will
+                    be needed.
+ High Tolerance     The percentage that an ingredient can go over the amount
+                    required for one container, i.e. the minimum amount that
+                    can be placed in a container. E.G. if a container requires
+                    10 kg and the high tolerance is 50% a maximum of 15kg will
+                    be needed.
+ Instructions       Two lines of instructions that will be displayed to the
+                    user when they are weighing the ingredient on the scale.
+
+ The other fields are not used in the current version of software.
+
+  An edit can be aborted by pressing the F10 key, or saved by pressing the ESC
+key. Both of these keys will exit the edit screen, and return to the browser.
+  Press the ESC key to exit from the browser and return to the main menu.
+
+@102   Recipe Editor
+  Selecting this option allows the editing of recipes. Recipes form the basis
+of orders. Recipes can exist with the same name to allow variations of recipes
+to exist, over a particualar weight range.
+  When this option is selected a list of current recipes stored in the
+database will be shown, along with the recipes description, and the weight
+range the recipe caters for. The cursor keys, PAGE UP, nad PAGE DOWN can be
+used to scroll around this display.
+  Pressing the ENTER key over a highlighted recipe will allow the editing of
+that receipe. Pressing the INSERT key will allow the entering of a new recipe.
+Pressing the DELETE key will allow the deleting of the highlighted recipe.
+
+#EDITING A RECIPE
+
+  The table below shows the fields editable from the ingredient editor, and
+the fields usage.
+
+
+ FIELD NAME         DESCRIPTION
+ ----------         -----------
+
+ Recipe Name        A code used by the recipe system to identify the type of
+                    recipe. This Field is only entered on new recipes. If a
+                    recipe exist of the same name the user is given the option
+                    of copying information, such as description, and batch wt,
+                    from an existing recipe.
+ Description        A description of the recipe.
+ Mix Type           One of three types of mixes. The type is associated with
+                    the number of containers used to mix a batch.
+                    @SINGLE - The batch is mixed into just one container.
+                    @MULTI  - The batch is mixed into more than one container.
+                    with each container holding one fraction of the mix.
+                    @USER - A combination of single and multi, that is
+                    dependant on how the user wishes to make the ingredient.
+ Mix Batch Wt       The weight of one mixed batch.
+ Min Target Wt      The minimum target weight that this recipe should be used
+                    on. Used to identify which recipe to use when transfering
+                    a recipe to an order when using more than one recipe with
+                    the same name. The recipe used will be the one in which
+                    the orders target wt lies between the recipes min and max
+                    target wt. This field defaults to 0 kg.
+ Max Target Wt      The maximum target weight this recipe supports. This field
+                    defaults to 9999.999 kg.
+
+  The min and max target weight can not overlap the min and max target wt of
+another recipe with the same name.
+  Below these fields are a list of ingredients that are currently assigned to
+this recipe. To edit an ingredient highlight the line the ingredient is on
+and press the ENTER key. To add a new ingredient press the INSERT key. To
+delete an ingredient highlight the line and press the DELETE key.
+  The fields editable from the Ingreident list are.
+
+ FIELD NAME         DESCRIPTION
+ ----------         -----------
+
+ Ingreident         An ingredient code, used to reference the ingredient
+                    information. The F1 key displays a list of currently
+                    entered ingredients. Press the ENTER key on this list to
+                    add a highlighted ingredient. NB Ingredients can only be
+                    edited for new records.
+ Key                A non editable field that identifies whether this
+                    ingredient is the master product.
+ Mix Ratio          The percentage of the mix that this ingredient will
+                    contribute.
+ Container Size     The size of the container that this ingredient will be
+                    placed in.
+
+  The ratio of the ingredient lines must add up to exactly 100%. The current
+total is display below the list. The recipe can not be saved if the sum of all
+the ingredient ratios do not add up to 100%.
+  Ingredients in the list can be moved as follows.An ingredient can be moved
+down through the list of ingredients by highlighting the ingredient and
+pressing the F6 key. An ingredient can be moved up the list by pressing the
+F5 key.
+  An ingredient can be set as the key ingredient by highlighting the desired
+ingredient and pressing the F3 key.
+  A Recipe can be saved by pressing the ESC key, or the edit can be aborted by
+pressing the F10 key.
+
+@103   Lot/Ingredient Cross Reference Editor
+  The scale stores the last lot number entered for an ingredient so that users
+do not have to keep re-entering lot numbers for the same ingredients. This
+editor allows the editing of this information.
+  When selected a list of currently entered lot/ingredient will be displayed.
+Pressing the ENTER key allows editing of an existing item. the INSERT key will
+add a new item to the list, and the DELETE key deletes an item from this list.
+
+#EDITING A LOT INGREDIENT CROSS REFERENCE
+
+  There are three editable fields within the record.
+
+ FIELD NAME         DESCRIPTION
+ ----------         -----------
+
+ M-ID               The cross reference is stored for each machine ID of the
+                    scale. This field is the machine ID for the desired scale.
+ Ingredient         An ingredient code, used to cross reference the ingredient
+                    The F1 key displays a lookup list of currently entered
+                    ingredients. Press the ENTER key on this list to add a
+                    highlighted ingredient.
+ Lot                A Lot number to be associated with the entered ingredient
+                    on the enter scale.
+
+  A cross reference can be saved by pressing the ESC key, or the edit can be
+aborted by pressing the F10 key.
+
+@202   Transaction Viewer
+  The transaction viewer displays a list of transactions currently held in the
+database. Active transactions are displayed in blue, and aborted transactions
+are displayed in grey, (assuming a coloured monitor). The list can be scrolled
+by using the CURSOR UP, CURSOR DOWN, PAGE UP, and PAGE DOWN keys. A specific
+transaction can be found by using the @Goto-Transaction option, using the F3
+key. When selected a window is displayed in which the user can enter the M-ID,
+and serial number of the transction they wish to goto. Press the ESC key to
+abort the the goto request or press the F2 key to goto the transction.
+  To display detailed information on a transaction, highlight the transaction
+and press the ENTER key. To return to the transaction list press the ESC key.
+
+@301   Schedule Report
+  This report displays a list of orders, which are sorted by their schedule
+date and order number. The report has criteria that allows the displaying of
+only orders between a specific date. Press the SPACE BAR to tick the use date
+range box, and then amend the from date and to date to select a date range.
+  Press the ESC key to abort the report, or the F2 key to print the report
+
+@302   Order Report
+  This report will display a list of currenly held orders. This option
+generates two different reports based on the order database records. The first
+report displays the main information associated with an order but does not
+display an ingredient information stored on an order, the order details are
+displayed in a column format. The second type of report available shows
+information about the ingredients assigned to an order. This report is
+displayed by selecting the detailed order option from the criteria list. This
+report shows the order number, recipe number, schedule date and ingredient
+information.
+  By selecting the date range box from the criteria list the report is
+resticted to only those orders whose schedule date lies between the from date
+and the to date. The work order number field can be used to select only orders
+matching a specific pattern. This field excepts the ? and * wild card entries.
+
+#WILD CARD ENTRY FIELDS
+  An example of using wild cards on a six digit number field.
+  The ? entry means select any value for this one field i.e. [?????2] would be
+any work order number ending in a 2, e.g. 2,12,22,32 etc. The * means select
+any entries that match the initial digits i.e. [0001* ] means match any fields
+between 100 and 199.
+
+@304   Ingredient Report
+  This report list the ingredient that are currently stored in the databse. A
+selection criteria allows the selecting of all ingredient matching a pattern.
+This field can use the wild card entries.
+
+#WILD CARD ENTRY FIELDS
+  An example of using wild cards on a six digit number field.
+  The ? entry means select any value for this one field i.e. [?????2] would be
+any work order number ending in a 2, e.g. 2,12,22,32 etc. The * means select
+any entries that match the initial digits i.e. [0001* ] means match any fields
+between 100 and 199.
+
+@305   Recipe Report
+  This report display information about the recipes stored in the database.
+This option actually generates two reports. The first report display more
+general information about the recipe in column format, but does not display
+any ingreident info. The second report, displayed by selecting the detailed
+report box, displays information about the ingredients assigned to each recipe
+but apart from this only displays the recipe no, and description.
+  Both reports use a filter to select recipes that match a specific recipe no
+range. This field may use the wild card entries to select matching recipes
+
+#WILD CARD ENTRY FIELDS
+  An example of using wild cards on a six digit number field.
+  The ? entry means select any value for this one field i.e. [?????2] would be
+any work order number ending in a 2, e.g. 2,12,22,32 etc. The * means select
+any entries that match the initial digits i.e. [0001* ] means match any fields
+between 100 and 199.
+
+@306   Transaction Report
+  This report displays information about the transactions stored in the
+database. Each transaction represents one weighed ingredient. This report
+displays information about that weighed ingredient including the scale that
+was weighed on and the ingreidents weight, the order number associated with
+the weighing.
+  This report uses many selection criteria to limit the number of transactions
+displayed as the transaction file can grow very large. Firstly by selecting
+the date range option and entering a from date and a to date, only
+transcations over a specific period can be selected. The other filters, all
+of which can use wild cards are, Ingredient Matching, Machine Id matching,
+serial number matching, work order numbers matching, lot and batch numbers
+matching.
+  When a transcation is weighed on the scale the transaction is marked as
+active. If the abort mix option is selected, then the transactions already
+weighed for that mix will be marked as aborted. Two selection boxes on the
+selection window allow the selecting of each type of transaction. If include
+active is selected then active transactions will be included by this report,
+if include aborted is selected then aborted transctions will also be included.
+NB Both of these options are initally on.
+  Transactions are deleted when the work order they are assigned too is
+deleted.
+
+#WILD CARD ENTRY FIELDS
+  An example of using wild cards on a six digit number field.
+  The ? entry means select any value for this one field i.e. [?????2] would be
+any work order number ending in a 2, e.g. 2,12,22,32 etc. The * means select
+any entries that match the initial digits i.e. [0001* ] means match any fields
+between 100 and 199.
+
+@307   Ingredient Assignment
+  This report displays a list of ingredients, how many containers of that type
+of ingredinet have been weighed, and the weight of the ingredients.
+  The report can break down the the information into lists based on specific
+criteria. The basic report shows only a grand total, with one entry for each
+ingredient, but with all ingredients weights added together. The total by date
+option breaks down this list into those weighed on a day to day basis. The
+total by Order No breaks down the list by Order Number and Ingredient,
+displaying the ingredients weighed for each order. The total by batch option
+breaks down the ingredient list by batch number, by ingredient to show the
+amount of ingredients weight to a specific batch.
+  Another option, detailed report, gives a transaction breakdown for each day
+showing the amount of each ingredient used per container.
+
+  This report uses many selection criteria to limit the number of transactions
+displayed as the transaction file can grow very large. Firstly by selecting
+the date range option and entering a from date and a to date, only
+transcations over a specific period can be selected. The other filters, all
+of which can use wild cards are, Ingredient Matching, Machine Id matching,
+serial number matching, work order numbers matching, lot and batch numbers
+matching.
+  When a transcation is weighed on the scale the transaction is marked as
+active. If the abort mix option is selected, then the transactions already
+weighed for that mix will be marked as aborted. Two selection boxes on the
+selection window allow the selecting of each type of transaction. If include
+active is selected then active transactions will be included by this report,
+if include aborted is selected then aborted transactions will also be included.
+NB Both of these options are initally on.
+
+#WILD CARD ENTRY FIELDS
+  An example of using wild cards on a six digit number field.
+  The ? entry means select any value for this one field i.e. [?????2] would be
+any work order number ending in a 2, e.g. 2,12,22,32 etc. The * means select
+any entries that match the initial digits i.e. [0001* ] means match any fields
+between 100 and 199.
+
+@203   Create Product
+ This option allows the user to create work orders for a product. The creation
+of the work orders is done automatically by this function so that the time
+needed to create the orders is minimised, and also so that the process of
+creating the orders is simplified for the user.
+ When selected this option displays a list of products available for creation.
+To create a product simpley select the product required from this list. The
+screen will then change to show a list of cooking methods available. Select a
+method from this list, (NOTe : There may be only on cooking method available).
+After the cooking method has been selected a prompt for the weight of product
+required is shown. Enter a weight and press the ENTER key.
+ The current progress of the work orders as they are created will be
+displayed. When the creation process is complete the Product Order Number will
+be shown.
+ Press the ESC key during any of the selection windows to abort the product
+creation.
+
+@502   Send Message
+ This option allows the user to send a message to a scale. To send a message
+enter the machine ID of the scale into the to machine box, and the message
+into the msg box, and then press the F2 key. To abort the message send press
+the ESC key.
+
+@399   View Saved Report
+ This option allows the user to view reports that have been saved useing the
+save report option while viewing a report. When selected it displays a list
+of currently saved reports. The user can display a report, by highlighting the
+report and pressing the ENTER key.
+ This option also allows the user to delete unwanted saved reports. To delete
+a report, highlight the report and press the F9 key.
+
+@204   Product Schedule
+ This option display a list of products currently in production. The list is
+ordered by creation date and by order number. The order numbers assigned to
+the production of products corresponds to the major order number assigned to
+all of the products recipes work order numbers.
+ This view allows the printing of a product cooking report. This is achieved
+by highlighting an order and then pressing the F2 key. This report shows
+for each recipe that makes up the product a progress on that recipes creation
+and then a list of the cooking method descriptions assigned to the product.
+
+@201   Order Schedule Viewer
+ This displays a list of work orders that are currently available, and allows
+the editing of these work orders.
+  When selected this option displays a list of work orders currently stored
+in the database. This list can be scrolled up and down by using the CURSOR UP,
+CURSOR DOWN, PAGE UP, and PAGE DOWN KEYS.
+  As the list is scrolled using these keys a highlight bar will be moved up
+and down through the list. When an work order is being highlighted by this bar
+the ENTER key can be used to edit the work order. Pressing the INSERT key will
+allow the entering of a new work order.
+  Pressing the DELETE key over a highlighted work order will delete that
+work order from the database, but this can only be done if the order has not
+had any ingredients weighed against it. If this option is selected the user is
+asked to confirm the deletion request by pressing the Y key, pressing either
+the ESC key or the N key will abort the deletion. The '+' and '-' keys can
+be used to change the order status.
+
+#EDITING AN WORK ORDER
+
+ A work order contains the following editable fields.
+
+  The table below shows the fields editable from the ingredient editor, and
+the fields usage.
+
+ FIELD NAME         DESCRIPTION
+ ----------         -----------
+ Work Order No      The order number associated with this order. All order
+                    numbers must be unique. The order number is made up of
+                    two parts. The major and minor number. The major number
+                    is the first six digits of the order number (those before
+                    the slash). These six digits are the same for each of
+                    the orders associated with a product, and are the same
+                    as the product work order number. The minor number,
+                    is the two digits after the slash, and are used to give
+                    product work orders unique numbers, these umbers start a
+                    zero and increase by one for each additional recipe that
+                    makes up a product. E.G. If a product with work order
+                    number 000015, consists of three recipes these recipes
+                    will have work order numbers of 000015/00, 000015/01, and
+                    000015/02. The minor number is only used for product work
+                    orders. If the user is creating a new work order then only
+                    the major number can be entered.
+ Schedule Date      The date that the creation of the order should commence.
+ Recipe Code        The recipe code that this order is creating, this can be
+                    blank indicating that the order has no set recipe.
+ Total Weight       The total weight that the order requires.
+ Status             @HOLD - The recipe has not yet been work upon.
+                    @WIP - The recipe is currently set to be worked upon,or is
+                    being work on.
+                    @COMP - The order is completed, (all ingredients have been
+                    weighed).
+                    The status has to be manually changed from HOLD to WIP,but
+                    will automatically be changed to COMP when compelte.
+ Mix Type           One of three types of mixes. The type is associated with
+                    the number of containers used to mix a batch.
+                    @SINGLE - The batch is mixed into just one container.
+                    @MULTI  - The batch is mixed into more than one container.
+                    with each container holding one fraction of the mix.
+                    @USER - A combination of single and multi, that is
+                    dependant on how the user wishes to make the ingredient.
+ Fixed Sequence     If ticked then the ingredients must be weighed in the
+                    order they are set in this editor.
+ Mix Batch Wt       The maximum weight that can be weighed of this recipe in
+                    a single time. This could be the maximum weight the scale
+                    can hold, or the maximum size of the biggest container.
+ Mixes Required     The number of mixes it will take to complete the order.
+                    Calculated from Total Weight / Mix Batch Wt rounded up.
+ Mixes Done         The number of mixes currently done.
+
+  If the user is creating a new order the after entering the order number the
+uses is prompted on whether they wish to copy the information from a recipe.
+If the user accepts to copy from a recipe then a list of availble recipes will
+be displayed. The user can then highlight a recipe and press the ENTER key.
+Only the recipe no is important here, the range is not.
+  As multiple recipes can exist with the same name but with different weights
+the weight of the order is then entered after the recipe is selected. The
+recipe whos range encompasses the target range will be selected. The orders
+fields will then be filled out with that recipe. If no recipe is found that
+encompasses the target weight an error will be displayed.
+  Below these fields are a list of ingredients that are currently assigned to
+this order. To edit an ingredient highlight the line the ingredient is on
+and press the ENTER key. To add a new ingredient press the INSERT key. To
+delete an ingredient highlight the line and press the DELETE key.
+  The fields editable from the Ingreident list are.
+
+ FIELD NAME         DESCRIPTION
+ ----------         -----------
+
+ Ingreident         An ingredient code, used to reference the ingredient
+                    information. The F1 key displays a list of currently
+                    entered ingredients. Press the ENTER key on this list to
+                    add a highlighted ingredient. NB Ingredients can only be
+                    edited for new records.
+ Key                A non editable field that identifies whether this
+                    ingredient is the master product.
+ Mix Ratio          The percentage of the mix that this inredient will
+                    contribute.
+ Container Size     The size of the container that this ingredient will be
+                    placed in.
+ Instructions       These two lines convey special instruction to the user
+                    when they are weighing the ingredient. Theses are
+                    initialy taken from the ingredient,but can be edited here
+                    if desired.
+
+  The ratio of the ingredient lines must add up to exactly 100%. The current
+total is display below the list. The order can not be saved if the sum of all
+the ingredient ratios do not add up to 100%.
+  Ingredients in the list can be moved as follows. An ingredient can be moved
+down through the list of ingredients by highlighting the ingredient and
+pressing the F6 key. An ingredient can be moved up the list by pressing the
+F5 key.
+  An ingredient can be set as the key ingredient by highlighting the desired
+ingredient and pressing the F3 key. For Sequenced fixed orders the key
+ingredient must be the first ingredient.
+  A order can be saved by pressing the ESC key, or the edit can be aborted by
+pressing the F10 key.
+
+@501   View Error File
+  This allows the viewing of of an error file created by the program. When
+selected it will display a list of all current error files. Select one from
+the list and press the enter key to display the error file.
+
+@104   Product Editor
+  Selecting this option allows the editing of products. Products contain one
+or more recipes that make up the product, and can also include cooking
+instructions for the product.
+  When this option is selected a list of current products stored in the
+database will be shown, along with the products description. The cursor keys,
+PAGE UP, nad PAGE DOWN can be used to scroll around this display.
+  Pressing the ENTER key over a highlighted product will allow the editing of
+that product. Pressing the INSERT key will allow the entering of a new
+product. Pressing the DELETE key will allow the deleting of the highlighted
+product.
+
+#EDITING A PRODUCT
+
+  The table below shows the fields editable from the ingredient editor, and
+the fields usage.
+
+
+ FIELD NAME         DESCRIPTION
+ ----------         -----------
+
+ Product Name       A code used by the recipe system to identify the type of
+                    product. This Field is only entered on new products. If a
+                    product exist of the same name the user will be warned to
+                    change the product name.
+ Description        A description of the product.
+
+  Below these fields are a list of recipes that are currently assigned to
+this product. To edit an recipe highlight the line the recipe is on and press
+the ENTER key. To add a new recipe press the INSERT key. To delete an recipe
+highlight the line and press the DELETE key.
+  The fields editable from the recipe list are.
+
+ FIELD NAME         DESCRIPTION
+ ----------         -----------
+
+ Recipe No          An Recipe code, used to reference the Recipe information.
+                    The F1 key displays a list of currently entered recipes.
+                    Press the ENTER key on this list to add a highlighted
+                    recipe. NB recipes can only be edited for new records.
+ Mix Ratio          The percentage of the mix that this recipe will
+                    contribute.
+
+  Unlike the order and recipe lists the ratio of the recipe lines can add up
+to over or under 100%. The current total is display below the list.
+  Recipes in the list can be moved as follows. An recipe can be moved down
+through the list of recipes by highlighting the recipe and pressing the F6
+key. An recipe can be moved up the list by pressing the F5 key.
+  By pressing the F7 key the user can enter cooking methods against a product.
+If no cooking methods are currently stored against an product then the cooking
+description editor is invoked immediently. Otherwise a lookup of currently
+available methods will be displayed. Either select one from this list or
+press insert to add a new method. If adding a new method then the methods
+title must be entered first. This title can not be blank. Once the title has
+been entered, or if editing a existing method, a list of cooking methods will
+be displayed. The ENTER key allows the editing of an existing record, or the
+INSERT key allows the entering of a new record. All new records will
+automatically be added to the end of the list, but the F5 and F6 keys can be
+used to scroll a list item up and down throuch the list.
+  The F2 key can be used to edit the methods title. The ESC key exits the
+editor and saves the method details. The F10 key aborts the edit without
+saving the methods.
+  A product can be saved by pressing the ESC key, or the edit can be aborted
+by pressing the F10 key.
+
+@308   Product Report
+  This report displays a list of products stored in the database, and the
+recipes that are used to create the product. Filters allow the selection of
+products by filters, and a tick box to include cooking methods in the report.
+
+#WILD CARD ENTRY FIELDS
+  An example of using wild cards on a six digit number field.
+  The ? entry means select any value for this one field i.e. [?????2] would be
+any work order number ending in a 2, e.g. 2,12,22,32 etc. The * means select
+any entries that match the initial digits i.e. [0001* ] means match any fields
+between 100 and 199.
+
+@404   Order ClearDown
+  This option deletes from the database all orders that are complete before
+a specific date. The option is password protected.
+  After the password is entered a window is displayed in which the user can
+enter a date. All complete orders before this date can be deleted.
+
+@405   Ingredient Usage Cleardown
+  The ingredient usage database is a record of every ingredient weighed since
+the last time the file was cleared, (or since the file was created). Unlike
+transactions this file is not clear when an order is deleted, and therefore
+can take up a vast amount of disk space after a while. This function can be
+used to delete these records and therefore free the amount of space required
+by the file.
+  This function is password protected, and so when selected the password
+enter window will be displayed. After the password is entered, a new window
+will be displayed in which the user can enter a date. All the ingredient usage
+logged before this date will be deleted.
+  NOTE : The ingredient usage file is not connected to the order file, so
+the ingredient usage records can be deleted without first deleting the word
+order.
+
+@309   Ingredient Usage Recport
+  The ingredient usage database is a record of every ingredient weighed since
+the last time the file was cleared, (or since the file was created). Unlike
+transactions this file is not clear when an order is deleted. This report can
+be used to view the  amount of esch type of ingredient weighed.
+  Selection criteria can be used to limit the report to over a certain time
+period. Also the report can be limited to match only certain ingredients or
+certain batches both of which can use wild cards.
+  The report groups ingredient together to display the number of containers
+of each ingredient weighed and the total weight of all these contaienrs. An
+option is available to group the ingredients by batch number then by
+ingredient code.
+
+
+#WILD CARD ENTRY FIELDS
+  An example of using wild cards on a six digit number field.
+  The ? entry means select any value for this one field i.e. [?????2] would be
+any work order number ending in a 2, e.g. 2,12,22,32 etc. The * means select
+any entries that match the initial digits i.e. [0001* ] means match any fields
+between 100 and 199.
+
+@503   Change Password
+  This option allows the user to change the password. The current password
+must be entered before it can be changed. The password protects some functions
+that clear elements of the database.

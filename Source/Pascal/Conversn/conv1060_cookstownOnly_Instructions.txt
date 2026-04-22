@@ -1,0 +1,21 @@
+CONV1060.SQL is only needed for Cookstowns database (had original conv1059.SQL file applied)
+---------------------------------------------------
+
+1. Stop SFORMIX program running on terminals (enter user name 'EXIT' at login prompt).
+
+
+2. From a command prompt in the FORMIX\FIL folder run (or do equivalent from Windows Explorer)::-
+  COPY *.DDF *.BAK
+  RENAME LOT.FIL *.NF
+
+
+3. From Pervasive Control Centre on the server:-
+  Execute the entire contents of the SQL file: conv1060.SQL
+
+
+4. From a command prompt in the FORMIX\FIL folder run (or do equivalent from Windows Explorer)::-
+  RENAME LOT.NF *.FIL
+
+
+
+5. Restart SFORMIX programs on terminals.

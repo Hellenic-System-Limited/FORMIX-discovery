@@ -1,0 +1,15 @@
+  Instructions for updating FORMIX 1.049 to 1.050
+  ------------------------------------------------------
+
+  1. Rename FORMIX.EXE to FORMIX.049
+
+  2. From the FORMIX\FIL folder copy *.ddf to a FORMIX\FIL\backup folder.
+  3. From the FORMIX\FIL folder rename FXTRANS.FIL to FXTRANS.NF
+
+  4. From Pervasive Control Center execute CNVF1050.SQL on the FORMIX database.
+
+  5. From the FORMIX\FIL folder rename FXTRANS.NF to FXTRANS.FIL
+  6. Copy FORMIX\UPDATE\FORMIX.EXE into the FORMIX folder.
+
+  7. Start FORMIX.EXE in the normal way and yes to the creation prompt for SRCCODE.FIL
+  8. From Pervasive Control Center execute CONV1050.SQL

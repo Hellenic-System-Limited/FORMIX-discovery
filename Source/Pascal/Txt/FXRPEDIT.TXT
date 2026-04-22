@@ -1,0 +1,50 @@
+ ~                              RECIPE EDITOR                                 ~
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³^ Recipe Code :^ [       ]      Desc.: [                              ]     ³
+ ³ Job Number  : [   ]                                                      ³
+ ³^ Method:^                                                                  ³
+ ³ Fixed Seq.  : [ ]            Work Group : [   ]                          ³
+ ³ Mix Weight  : [         ]kg  &unit Size : [         ]kg                  ³
+$IFDEFINE STOCK
+ ³ Proc Loss % : [      ]       Stock Req  : [     ]  Issue No : [        ] ³
+$ELSE
+ ³ Proc Loss % : [      ]                             Issue No : [        ] ³
+$ENDIF
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+$IFDEFINE PHR
+ ~                     Mix            Container                                     ~
+ ~Line Ingredient Key  Ratio      PHR Size      Description                         ~
+$ELSE
+ ~                     Mix     Container                                     ~
+ ~Line Ingredient Key  Ratio   Size      Description                         ~
+$ENDIF
+
+
+
+
+
+
+
+
+
+ ~    F3 -Set Key Ingredient                                                  ~
+ ~ F5/F6 -Move Ingredient Up/Down     F10 -Abandon Recipe Edit     ESC -Done  ~
+@01,18,03,08,01, RECIPE CODE
+@02,40,03,30,00, DESCRIPTION
+@03,18,04,14,00, Job Number
+@04,11,05,01,00, MIX TYPE
+@05,18,06,01,00, FIXED SEQUENCE
+@06,46,06,03,00, Work Group
+@07,18,07,09,00, MIX BATCH WEIGHT
+$IFDEFINE BATCHES
+@08,46,07,09,01, "CASE" SIZE
+$ELSE
+@08,46,07,09,00, "CASE" SIZE
+$ENDIF
+@09,18,08,06,00, Proc. Loss
+$IFDEFINE STOCK
+@10,46,08,05,00, Stock Level
+$ELSE
+@10,46,08,05,02, Stock Level
+$ENDIF
+@11,66,08,08,00, Issue No

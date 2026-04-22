@@ -1,0 +1,68 @@
+FORMIX v1.xxx   (updating from a version that is after 1.059)
+=============
+
+
+
+  Download FORMIXZ.ZIP from the FTP server
+
+  To explode zipped file (FORMIXZ.ZIP).
+  ------------------------------------
+  Save file to \FORMIX\UPDATE directory.
+  From explorer, right click on file and select 'Extract All...'
+  Change destination path to the "\FORMIX\UPDATE" folder and continue.
+
+
+  To Install  ASSUMING YOU ARE CURRENTLY RUNNING V1.XXX
+  ----------  +++++++++++++++++++++++++++++++++++++++++
+  Explode zip file as above.
+  Quit all running FORMIX and SFORMIX(recipe terminals) programs on site.
+  
+  From a Command prompt in the FORMIX directory run (or do equivalent from Windows Explorer):
+     RENAME FORMIX.EXE   FORMIX.vvv
+     RENAME FORMIXW8.EXE FORMIXW8.vvv  ?????????????????????
+                        (where vvv is suffix of old ver)
+  
+  From a Command prompt in the FORMIX\FIL directory run :-
+     ..\UPDATE\CONV1067                            (renames FXTRANWR.FIL to *.066)
+
+     COPY *.DDF *.BAK
+
+067 pre this version requires the following
+     RENAME FXTRANWR.FIL *.NF
+
+  From Pervasive Control Centre on the server execute the entire contents of the following SQL files on the FORMIX database:
+     FORMIX\UPDATE\CONV1062.SQL
+     FORMIX\UPDATE\CONV1063.SQL
+     FORMIX\UPDATE\CONV1064.SQL
+     FORMIX\UPDATE\CONV1067.SQL
+
+  From a Command prompt in the FORMIX\FIL directory run (or do equivalent from Windows Explorer):
+     RENAME FXTRANWR.NF *.FIL
+
+  From a Command prompt in the FORMIX\TXT directory run (or do equivalent from Windows Explorer) :-
+     COPY *.TXT *.OLD
+     COPY MENU.FMU *.OLD
+     COPY ..\UPDATE\TXT\*.*
+  
+  From a Command prompt in the FORMIX directory run (or do equivalent from Windows Explorer):-
+     COPY UPDATE\FORMIX.EXE
+     COPY UPDATE\FORMIXW8.EXE
+ 
+  Restart programs.
+
+  From Pervasive Control Centre on the server execute the entire contents of the following SQL files:
+     ??????.SQL
+   
+
+
+
+This update does not include data file conversions and can be rolled back by ?????????
+In the FORMIX folder:
+  delete FORMIX.EXE
+  delete FORMIXW8.EXE
+  rename FORMIX.vvv    to FORMIX.EXE
+  rename FORMIXW8.vvv  to FORMIXW8.EXE ???????????????????
+
+From a command prompt in the FORMIX\TXT folder run:-
+  COPY *.OLD *.TXT
+  COPY MENU.TXT MENU.FMU

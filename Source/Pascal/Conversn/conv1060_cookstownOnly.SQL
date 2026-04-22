@@ -1,0 +1,21 @@
+-- corrects mistake in original CONV1059.SQL
+
+
+DROP INDEX "LotIRef"."ByIngredientMID";
+
+SET TRUENULLCREATE=OFF;
+
+DROP TABLE "LotIRef" IN DICTIONARY;
+
+CREATE TABLE "LotIRef" in DICTIONARY USING 'LOT.FIL' (
+
+  "Ingredient" CHAR(8) NOT NULL,
+
+  "MachineID" SMALLINT NOT NULL,
+
+  "Lot_No" CHAR(14) NOT NULL
+);
+
+CREATE UNIQUE NOT MODIFIABLE INDEX "ByIngredientMID" IN DICTIONARY ON "LotIRef" ("Ingredient","MachineID");
+
+SET TRUENULLCREATE=ON;

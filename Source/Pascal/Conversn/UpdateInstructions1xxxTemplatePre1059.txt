@@ -1,0 +1,59 @@
+FORMIX v1.xxx  (updating to a version below v1.059)
+=============
+
+
+
+  Download FORMIXZ.ZIP from the FTP server
+
+  To explode zipped file (FORMIXZ.ZIP).
+  ------------------------------------
+  Save file to \FORMIX\UPDATE directory.
+  From explorer, right click on file and select 'Extract All...'
+  Change destination path to the "\FORMIX\UPDATE" folder and continue.
+
+
+  To Install  ASSUMING YOU ARE CURRENTLY RUNNING V1.XXX
+  ----------  +++++++++++++++++++++++++++++++++++++++++
+  Explode zip file as above.
+  Quit all running FORMIX and SFORMIX(recipe terminals) programs on site.
+  
+  From a Command prompt in the FORMIX directory run (or do equivalent from Windows Explorer):
+     RENAME FORMIX.EXE   FORMIX.vvv
+     RENAME FORMIXW8.EXE FORMIXW8.vvv  ?????????????????????
+                        (where vvv is suffix of old ver)
+  
+  From a Command prompt in the FORMIX\FIL directory run :-
+     ..\UPDATE\CONV1014                            (renames FXTRANS.FIL to *.013)
+
+     COPY *.DDF *.BAK
+
+050 pre this version requires the following ??????????
+     RENAME FXTRANS.FIL *.NF
+
+  From Pervasive Control Centre on the server execute the entire contents of the following SQL files:
+     FORMIX\UPDATE\CNVF1050.SQL
+     FORMIX\UPDATE\CNVF1054.SQL
+     FORMIX\UPDATE\CNVF1055.SQL
+
+  From a Command prompt in the FORMIX\FIL directory run (or do equivalent from Windows Explorer):
+     RENAME FXTRANS.NF *.FIL
+
+  From a Command prompt in the FORMIX\TXT directory run (or do equivalent from Windows Explorer) :-
+     COPY *.TXT *.OLD
+     COPY MENU.FMU *.OLD
+     COPY ..\UPDATE\TXT\*.*
+  
+  From a Command prompt in the FORMIX directory run (or do equivalent from Windows Explorer):-
+     COPY UPDATE\FORMIX.EXE
+     COPY UPDATE\FORMIXW8.EXE
+ 
+  Restart programs.
+
+  From Pervasive Control Centre on the server execute the entire contents of the following SQL files:
+     CONV1050.SQL     (not CNVF1050.SQL)
+   
+
+
+
+This update does not include data file conversions and can be rolled back by
+  Restoring the original TXT files, exes and DDFs

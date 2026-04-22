@@ -1,0 +1,28 @@
+DROP TABLE UserTable In Dictionary#
+
+SET TRUENULLCREATE=OFF#
+
+CREATE TABLE UserTable IN DICTIONARY using 'User.FIL'(
+UserName VarChar(8) not null,
+FullName VarChar(30) not null,
+Pass VarChar(8) not null,
+AccessLevel Integer,
+ReservedSpace Char(27))#
+
+CREATE UNIQUE INDEX "ByUser" IN DICTIONARY ON UserTable(UserName)#
+
+SET TRUENULLCREATE=ON#
+
+SET TRUENULLCREATE=OFF#
+
+CREATE TABLE StockTable IN DICTIONARY using 'FxStock.FIL'(
+Product VarChar(8) not null,
+InStock Integer,
+Weight Float,
+Initial Integer,
+InitWt Float,
+ReservedSpace Char(40))#
+
+CREATE UNIQUE INDEX "ByProduct" IN DICTIONARY ON StockTable(Product)#
+
+SET TRUENULLCREATE=ON#

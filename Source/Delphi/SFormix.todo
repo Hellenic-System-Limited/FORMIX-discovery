@@ -1,0 +1,7 @@
+{TODO : New program to read in old style scale setup file and put details into registry file}
+{TODO : Put in all setup screens to allow user configuration}
+{TODO : Put through a transaction correctly and update all realted records as required}
+{TODO : Put in all printer stuff}
+{TODO : Force the correct order for weighing the ingredient}
+{TODO : Change Scale graph heights so they match selected ingredient values}
+{TODO : Change all header details when new ingredient selected}

@@ -1,0 +1,10 @@
+  Instructions for updating FORMIX 1.060 to 1.062
+  ------------------------------------------------------
+
+  1. Rename FORMIX.EXE to FORMIX.061
+  2. From the FORMIX\FIL folder copy *.ddf to a FORMIX\FIL\backup folder.
+  3. From Pervasive Control Center execute CNVF1062.SQL on the FORMIX database.
+  4. From the FORMIX\TXT folder copy *.TXT to *.OLD
+  5. Copy FORMIX\UPDATE\FXRPEDIT.TXT into the FORMIX\TXT folder.
+  6. Copy FORMIX\UPDATE\FORMIX.EXE into the FORMIX folder.
+  7. Start FORMIX.EXE

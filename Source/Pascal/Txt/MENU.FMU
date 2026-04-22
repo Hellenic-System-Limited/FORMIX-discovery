@@ -1,0 +1,55 @@
+$STARTMENU,02,01,02,02,007,000,014,001,015,E,dit
+ 0101,N,@Ingredient File
+ 0102,N,@Recipe File
+ 0103,N,@Lot/Ingredient Reference
+ 0104,N,@Product Editor
+ 0105,N,@Costing Edit
+ 0106,N,@User Edit
+ 0107,N,@Macro Group Edit
+$ENDMENU
+
+$STARTMENU,08,01,08,02,007,000,014,001,015,O,rder
+ 0201,N,@Order Schedule Browser
+ 0204,N,@Product Order Schedule
+ 0000,Y,-
+ 0203,N,@Create Orders for Product
+ 0000,Y,-
+ 0202,N,@Transaction Browser
+$ENDMENU
+
+$STARTMENU,15,01,15,02,007,000,014,001,015,R,eports
+ 0301,N,@Order Schedule
+ 0302,N,Order @Detail Report
+ 0000,Y,-
+ 0304,N,@Ingredient Listing
+ 0305,N,@Recipe Listing
+ 0308,N,@Product Listing
+ 0000,Y,-
+ 0306,N,@Transaction Listing
+ 0307,N,Ingredient @Assignment
+ 0310,N,User @Weighing Details
+ 0309,N,Ingredient @Usage
+ 0311,N,Stock Report
+ 0000,Y,-
+ 0398,N,Macro Report Generate
+ 0000,Y,-
+ 0399,N,@View Saved Report
+$ENDMENU
+
+$STARTMENU,24,01,24,02,007,000,014,004,015,M,aintenance
+ 0404,N,@Order Cleardown
+ 0405,N,@Ingredient Usage ClearDown
+$ENDMENU
+
+$STARTMENU,37,01,36,02,007,000,014,001,015,U,tilities
+ 0501,N,@View Error File
+ 0502,N,@Send Message
+ $STARTSUB,N,30,03,@CSV Import
+  0503,N,@Ingredient Import
+  0504,N,@Recipe Import
+ $ENDMENU
+$ENDMENU
+
+$STARTMENU,48,01,47,02,007,000,014,001,015,Q,uit
+ 0000,N,@Quit
+$ENDMENU

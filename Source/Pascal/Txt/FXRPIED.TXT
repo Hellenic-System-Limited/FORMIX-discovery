@@ -1,0 +1,23 @@
+ ~         RECIPE LINE EDITOR          ~
+
+    ^Ingredient     :^   [        ]
+$IFDEFINE PHR
+    P.H.R          :    [       ]
+$ELSE
+    Mix Ratio      :    [       ]%
+$ENDIF
+    Container Size :   [        ]
+    Yield          :  [         ]%
+    Low  Wt. Tol.  :    -[      ]%
+    High Wt. Tol.  :    +[      ]%
+
+
+
+ ~ F1 -Lookup   F10 -Abort   ESC -Done ~
+@01,24,03,08,00, INGREDIENT REF
+@02,25,04,07,00, MIX RATIO
+@03,24,05,08,00, CONTAINER SIZE
+@04,23,06,09,00, YIELD PERCENTAGE
+@05,26,07,06,00, LOW TOLERANCE
+@06,26,08,06,00, HIGH TOLERANCE
+@07,02,10,30,01, INGREDIENT DESCRIPTION

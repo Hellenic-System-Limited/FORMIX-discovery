@@ -1,0 +1,12 @@
+SET TRUENULLCREATE=OFF#
+CREATE TABLE Trans_Warnings IN DICTIONARY USING 'FXTRANWR.FIL'
+(
+MC_ID            USMALLINT,
+Serial_No        INTEGER,
+Reserved1        UTINYINT,
+Warning          CHAR(160),
+Reserved         BINARY(20)
+)#
+CREATE NOT MODIFIABLE INDEX ById IN DICTIONARY ON
+ Trans_Warnings(MC_Id , Serial_No)#
+SET TRUENULLCREATE=ON#

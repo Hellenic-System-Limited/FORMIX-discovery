@@ -1,0 +1,1 @@
+INSERT INTO REGISTRY VALUES ('NavBarcodeLengths', '14,18', 'Scale.')#
