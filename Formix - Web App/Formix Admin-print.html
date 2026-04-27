@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=1280"/>
+  <title>Formix — Recipe management admin (Print)</title>
+  <link rel="stylesheet" href="colors_and_type.css"/>
+  <link rel="stylesheet" href="app.css"/>
+  <link rel="icon" href="assets/hellenic-mark.png"/>
+  <style>
+    /* ---------- Print-specific overrides ---------- */
+    @page {
+      size: 1320px 1700px;
+      margin: 0;
+    }
+    html, body {
+      background: var(--hs-bg-alt) !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .print-page {
+      width: 1320px;
+      min-height: 1700px;
+      background: var(--hs-bg-alt);
+      page-break-after: always;
+      break-after: page;
+      position: relative;
+      overflow: hidden;
+    }
+    .print-page:last-child { page-break-after: auto; break-after: auto; }
+
+    /* The app grid inside each page */
+    .print-page .app {
+      display: grid;
+      grid-template-columns: 248px 1fr;
+      min-height: 1700px;
+    }
+    .print-page .sidebar {
+      position: static !important;
+      height: auto !important;
+      min-height: 1700px;
+    }
+    .print-page .main {
+      min-height: 1700px;
+    }
+
+    /* Kill sticky/overflow for print */
+    .topbar { position: static !important; }
+    .drawer, .toast-stack, .tweaks-fab, .tweaks-panel { display: none !important; }
+
+    /* Ensure content isn't cut inside cards */
+    .card, .stat, .recipe-card, .terminal-card { break-inside: avoid; }
+
+    @media print {
+      body { margin: 0; }
+      .print-page { box-shadow: none; margin: 0; }
+    }
+
+    /* Page header tag for print runs */
+    .print-tag {
+      position: absolute;
+      top: 10px;
+      right: 16px;
+      font-size: 10px;
+      font-family: var(--hs-font-mono);
+      color: var(--hs-fg-3);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+  <script type="text/babel" src="data.jsx"></script>
+  <script type="text/babel" src="ui.jsx"></script>
+  <script type="text/babel" src="pages/Dashboard.jsx"></script>
+  <script type="text/babel" src="pages/Recipes.jsx"></script>
+  <script type="text/babel" src="pages/Orders.jsx"></script>
+  <script type="text/babel" src="pages/Ingredients.jsx"></script>
+  <script type="text/babel" src="pages/Allergens.jsx"></script>
+  <script type="text/babel" src="pages/Terminals.jsx"></script>
+
+  <script type="text/babel">
+    const { useState: useStatePrint } = React;
+
+    const PRINT_NAV = [
+      { id: 'dashboard',   label: 'Dashboard',   icon: 'home',       group: 'Operations', Page: () => <DashboardPage/> },
+      { id: 'orders',      label: 'Orders',      icon: 'clipboard',  group: 'Operations', Page: () => <OrdersPage/> },
+      { id: 'recipes',     label: 'Recipes',     icon: 'book',       group: 'Master data', Page: () => <RecipesPage/> },
+      { id: 'ingredients', label: 'Ingredients', icon: 'package',    group: 'Master data', Page: () => <IngredientsPage/> },
+      { id: 'allergens',   label: 'Allergens',   icon: 'alert',      group: 'Master data', Page: () => <AllergensPage/> },
+      { id: 'qa',          label: 'QA checks',   icon: 'shield',     group: 'Master data', Page: () => <QAPage/> },
+      { id: 'terminals',   label: 'Terminals',   icon: 'terminal',   group: 'Fleet',       Page: () => <TerminalsPage/> },
+      { id: 'users',       label: 'Users & roles', icon: 'users',    group: 'Fleet',       Page: () => <UsersPage/> },
+    ];
+
+    const CRUMBS_P = {
+      dashboard:   ['Operations', 'Dashboard'],
+      orders:      ['Operations', 'Orders'],
+      recipes:     ['Master data', 'Recipes'],
+      ingredients: ['Master data', 'Ingredients'],
+      allergens:   ['Master data', 'Allergens'],
+      qa:          ['Master data', 'QA checks'],
+      terminals:   ['Fleet', 'Terminals'],
+      users:       ['Fleet', 'Users & roles'],
+    };
+
+    function StaticSidebar({ page }) {
+      const groups = [...new Set(PRINT_NAV.map(n => n.group))];
+      return (
+        <aside className="sidebar">
+          <div className="sidebar__brand">
+            <img src="assets/hellenic-mark.png" alt="Hellenic"/>
+            <div className="sidebar__brand-text">
+              <div className="sidebar__brand-title">Formix</div>
+              <div className="sidebar__brand-sub">Recipe system</div>
+            </div>
+          </div>
+          {groups.map(g => (
+            <React.Fragment key={g}>
+              <div className="nav-section">{g}</div>
+              {PRINT_NAV.filter(n => n.group === g).map(n => (
+                <div key={n.id} className={`nav-item ${page===n.id?'nav-item--active':''}`}>
+                  <Icon name={n.icon} size={18}/>
+                  <span>{n.label}</span>
+                </div>
+              ))}
+            </React.Fragment>
+          ))}
+          <div className="sidebar__footer">
+            <div className="sidebar__user">
+              <div className="avatar">CB</div>
+              <div style={{flex:1,minWidth:0}}>
+                <div className="sidebar__user-name">Claire Bennett</div>
+                <div className="sidebar__user-role">Planner · Appleby Foods</div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      );
+    }
+
+    function StaticTopbar({ page }) {
+      const crumbs = CRUMBS_P[page] || [];
+      return (
+        <div className="topbar">
+          <div className="topbar__crumbs">
+            <span>Appleby Foods</span>
+            <span className="sep">/</span>
+            {crumbs.map((c, i) => (
+              <React.Fragment key={i}>
+                <span style={{color: i === crumbs.length - 1 ? 'var(--hs-fg-1)' : 'var(--hs-fg-3)', fontWeight: i === crumbs.length - 1 ? 600 : 400}}>{c}</span>
+                {i < crumbs.length - 1 && <span className="sep">/</span>}
+              </React.Fragment>
+            ))}
+          </div>
+          <div className="topbar__actions">
+            <div className="input-group cmdk">
+              <Icon name="search" size={14}/>
+              <input className="input" placeholder="Search…" readOnly style={{paddingLeft: 32, fontSize: 13, height: 36}}/>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    function PrintApp() {
+      return (
+        <ToastProvider>
+          {PRINT_NAV.map((n, idx) => {
+            const Page = n.Page;
+            return (
+              <div key={n.id} className="print-page" data-screen-label={`${String(idx+1).padStart(2,'0')} ${n.label}`}>
+                <div className="print-tag">Formix · {n.label} · {idx+1}/{PRINT_NAV.length}</div>
+                <div className="app">
+                  <StaticSidebar page={n.id}/>
+                  <main className="main">
+                    <StaticTopbar page={n.id}/>
+                    <Page/>
+                  </main>
+                </div>
+              </div>
+            );
+          })}
+        </ToastProvider>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<PrintApp/>);
+
+    // Auto-print once everything is ready
+    (async () => {
+      try { await document.fonts.ready; } catch (e) {}
+      // Give React + Babel time to finish rendering
+      await new Promise(r => setTimeout(r, 1200));
+      window.print();
+    })();
+  </script>
+</body>
+</html>

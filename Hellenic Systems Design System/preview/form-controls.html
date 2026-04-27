@@ -1,0 +1,18 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Form controls</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>body{margin:0;padding:20px;background:#fff;font-family:var(--hs-font-sans);color:var(--hs-fg-1)}
+.row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+label{font-size:12px;font-weight:600;color:var(--hs-fg-2);letter-spacing:.02em;display:block;margin-bottom:6px}
+.input{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;padding:10px 12px;border-radius:8px;border:1px solid var(--hs-border);background:#fff;color:var(--hs-fg-1)}
+.input:focus{outline:none;border-color:#4934ad;box-shadow:0 0 0 3px rgba(73,52,173,.25)}
+.input.err{border-color:#d4245c}
+.hint{font-size:12px;color:var(--hs-fg-3);margin-top:4px}
+.hint.err{color:#d4245c}
+</style></head>
+<body>
+<div class="row">
+  <div><label>Lot number</label><input class="input" placeholder="e.g. LOT-00142"><div class="hint">Optional</div></div>
+  <div><label>Terminal name</label><input class="input" value="Scale1"><div class="hint">Focused</div></div>
+  <div><label>Required weight</label><input class="input err" value="50.2 kg"><div class="hint err">Out of tolerance</div></div>
+</div>
+</body></html>

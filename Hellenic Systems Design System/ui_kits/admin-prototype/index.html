@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=800, initial-scale=1.0">
+  <title>Hellenic Admin Prototype</title>
+  <link rel="stylesheet" href="../formix-terminal/../colors_and_type.css">
+  <style>body { margin: 0; background: #f7f8fa; font-family: 'Figtree', sans-serif; }</style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    // AdminShell component
+    function AdminShell({ children }) {
+      return (
+        <div style={{
+          width: 1000, minHeight: 700, margin: '40px auto', background: '#fff', borderRadius: 18, boxShadow: '0 8px 32px rgba(18,37,89,.10)', display: 'flex', flexDirection: 'column', overflow: 'hidden', border: '1px solid #e3e6f0'
+        }}>
+          <header style={{ background: 'linear-gradient(90deg, #4934ad 0%, #d4245c 100%)', color: '#fff', padding: '18px 32px', fontSize: 28, fontWeight: 700, letterSpacing: '-0.01em', display: 'flex', alignItems: 'center', gap: 18 }}>
+            <span style={{ height: 38, width: 38, display: 'inline-block', background: 'url(../assets/logo.svg) no-repeat center/contain', marginRight: 18 }} />
+            Hellenic Recipe Admin
+          </header>
+          <div style={{ display: 'flex', flex: 1, minHeight: 0 }}>
+            {children}
+          </div>
+        </div>
+      );
+    }
+
+    // AdminNav component
+    function AdminNav({ section, onSection }) {
+      const nav = [
+        { key: 'recipes', label: 'Recipes' },
+        { key: 'orders', label: 'Orders' },
+        { key: 'ingredients', label: 'Ingredients' },
+        { key: 'users', label: 'Users' },
+        { key: 'audit', label: 'Audit' },
+      ];
+      return (
+        <nav style={{ width: 180, background: '#f7f8fa', borderRight: '1px solid #e3e6f0', padding: '32px 0', display: 'flex', flexDirection: 'column', gap: 8 }}>
+          {nav.map(item => (
+            <button key={item.key} onClick={() => onSection(item.key)}
+              style={{
+                background: section === item.key ? 'linear-gradient(90deg, #4934ad 0%, #d4245c 100%)' : 'none',
+                color: section === item.key ? '#fff' : '#4934ad',
+                fontWeight: 600, fontSize: 18, border: 'none', borderRadius: 8, margin: '0 18px', padding: '12px 18px', cursor: 'pointer', textAlign: 'left', transition: 'all 0.2s'
+              }}>{item.label}</button>
+          ))}
+        </nav>
+      );
+    }
+
+    // Section screens
+    function RecipeAdmin() {
+      // Mock recipe data
+      const [recipes, setRecipes] = React.useState([
+        { id: 1, code: 'SPICE-A', description: 'Caribbean jerk seasoning', version: 1, lines: 5 },
+        { id: 2, code: 'BREAD-01', description: 'White bread base', version: 2, lines: 7 },
+        { id: 3, code: 'SOUP-CH', description: 'Chicken soup mix', version: 1, lines: 6 },
+      ]);
+      const [selected, setSelected] = React.useState(1);
+      const [showForm, setShowForm] = React.useState(false);
+      const [form, setForm] = React.useState({ code: '', description: '', version: 1 });
+      const selectedRecipe = recipes.find(r => r.id === selected);
+
+      function handleSelect(id) {
+        setSelected(id);
+        setShowForm(false);
+      }
+      function handleAdd() {
+        setForm({ code: '', description: '', version: 1 });
+        setShowForm('add');
+      }
+      function handleEdit() {
+        if (!selectedRecipe) return;
+        setForm({ code: selectedRecipe.code, description: selectedRecipe.description, version: selectedRecipe.version });
+        setShowForm('edit');
+      }
+      function handleDelete() {
+        if (!selectedRecipe) return;
+        if (window.confirm('Delete this recipe?')) {
+          setRecipes(recipes.filter(r => r.id !== selectedRecipe.id));
+          setSelected(null);
+        }
+      }
+      function handleFormSubmit(e) {
+        e.preventDefault();
+        if (showForm === 'add') {
+          setRecipes([...recipes, { id: Date.now(), ...form, lines: 0 }]);
+          setSelected(null);
+        } else if (showForm === 'edit') {
+          setRecipes(recipes.map(r => r.id === selectedRecipe.id ? { ...r, ...form } : r));
+        }
+        setShowForm(false);
+      }
+
+      return (
+        <div style={{ display: 'flex', gap: 32 }}>
+          {/* Recipe List */}
+          <div style={{ minWidth: 320 }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10 }}>
+              <h2 style={{ color: '#4934ad', fontWeight: 700, fontSize: 22, margin: 0 }}>Recipes</h2>
+              <button onClick={handleAdd} style={{ background: '#4934ad', color: '#fff', border: 'none', borderRadius: 6, padding: '6px 14px', fontWeight: 600, fontSize: 15, cursor: 'pointer' }}>+ Add</button>
+            </div>
+            <table style={{ width: '100%', borderCollapse: 'collapse', background: '#fafbfc', borderRadius: 8, overflow: 'hidden', fontSize: 15 }}>
+              <thead>
+                <tr style={{ background: '#edeafd', color: '#4934ad' }}>
+                  <th style={{ textAlign: 'left', padding: '7px 10px' }}>Code</th>
+                  <th style={{ textAlign: 'left', padding: '7px 10px' }}>Description</th>
+                  <th style={{ textAlign: 'center', padding: '7px 10px' }}>Ver</th>
+                  <th style={{ textAlign: 'center', padding: '7px 10px' }}>Lines</th>
+                </tr>
+              </thead>
+              <tbody>
+                {recipes.map(r => (
+                  <tr key={r.id} style={{ background: selected === r.id ? '#f2f0fa' : undefined, cursor: 'pointer' }} onClick={() => handleSelect(r.id)}>
+                    <td style={{ padding: '7px 10px', fontWeight: 600 }}>{r.code}</td>
+                    <td style={{ padding: '7px 10px' }}>{r.description}</td>
+                    <td style={{ textAlign: 'center', padding: '7px 10px' }}>{r.version}</td>
+                    <td style={{ textAlign: 'center', padding: '7px 10px' }}>{r.lines}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          {/* Recipe Detail / Edit */}
+          <div style={{ flex: 1, minWidth: 320 }}>
+            {showForm ? (
+              <form onSubmit={handleFormSubmit} style={{ background: '#f7f8fa', borderRadius: 10, padding: 24, boxShadow: '0 2px 8px rgba(73,52,173,0.06)', maxWidth: 400 }}>
+                <h3 style={{ color: '#4934ad', fontWeight: 700, fontSize: 19, marginTop: 0 }}>{showForm === 'add' ? 'Add Recipe' : 'Edit Recipe'}</h3>
+                <div style={{ marginBottom: 14 }}>
+                  <label style={{ fontWeight: 600, fontSize: 15 }}>Code<br />
+                    <input required value={form.code} onChange={e => setForm(f => ({ ...f, code: e.target.value }))} style={{ width: '100%', padding: 7, borderRadius: 5, border: '1px solid #ccc', fontSize: 15 }} />
+                  </label>
+                </div>
+                <div style={{ marginBottom: 14 }}>
+                  <label style={{ fontWeight: 600, fontSize: 15 }}>Description<br />
+                    <input required value={form.description} onChange={e => setForm(f => ({ ...f, description: e.target.value }))} style={{ width: '100%', padding: 7, borderRadius: 5, border: '1px solid #ccc', fontSize: 15 }} />
+                  </label>
+                </div>
+                <div style={{ marginBottom: 18 }}>
+                  <label style={{ fontWeight: 600, fontSize: 15 }}>Version<br />
+                    <input type="number" min={1} value={form.version} onChange={e => setForm(f => ({ ...f, version: Number(e.target.value) }))} style={{ width: 80, padding: 7, borderRadius: 5, border: '1px solid #ccc', fontSize: 15 }} />
+                  </label>
+                </div>
+                <div style={{ display: 'flex', gap: 10 }}>
+                  <button type="submit" style={{ background: '#4934ad', color: '#fff', border: 'none', borderRadius: 6, padding: '7px 18px', fontWeight: 600, fontSize: 15, cursor: 'pointer' }}>Save</button>
+                  <button type="button" onClick={() => setShowForm(false)} style={{ background: '#e3e6f0', color: '#4934ad', border: 'none', borderRadius: 6, padding: '7px 18px', fontWeight: 600, fontSize: 15, cursor: 'pointer' }}>Cancel</button>
+                </div>
+              </form>
+            ) : selectedRecipe ? (
+              <div style={{ background: '#f7f8fa', borderRadius: 10, padding: 24, boxShadow: '0 2px 8px rgba(73,52,173,0.06)', maxWidth: 400 }}>
+                <h3 style={{ color: '#4934ad', fontWeight: 700, fontSize: 19, marginTop: 0 }}>Recipe Details</h3>
+                <div style={{ marginBottom: 10 }}><b>Code:</b> {selectedRecipe.code}</div>
+                <div style={{ marginBottom: 10 }}><b>Description:</b> {selectedRecipe.description}</div>
+                <div style={{ marginBottom: 10 }}><b>Version:</b> {selectedRecipe.version}</div>
+                <div style={{ marginBottom: 10 }}><b>Lines:</b> {selectedRecipe.lines}</div>
+                <div style={{ display: 'flex', gap: 10, marginTop: 18 }}>
+                  <button onClick={handleEdit} style={{ background: '#4934ad', color: '#fff', border: 'none', borderRadius: 6, padding: '7px 18px', fontWeight: 600, fontSize: 15, cursor: 'pointer' }}>Edit</button>
+                  <button onClick={handleDelete} style={{ background: '#d4245c', color: '#fff', border: 'none', borderRadius: 6, padding: '7px 18px', fontWeight: 600, fontSize: 15, cursor: 'pointer' }}>Delete</button>
+                </div>
+              </div>
+            ) : (
+              <div style={{ color: '#888', fontStyle: 'italic', marginTop: 40 }}>Select a recipe to view details.</div>
+            )}
+          </div>
+        </div>
+      );
+    }
+    function OrderAdmin() {
+      return (
+        <div>
+          <h2 style={{ color: '#4934ad', fontWeight: 700, fontSize: 24 }}>Order Management</h2>
+          <p>View, create, and manage production orders. Assign recipes, schedule mixes, and track status.</p>
+        </div>
+      );
+    }
+    function IngredientAdmin() {
+      return (
+        <div>
+          <h2 style={{ color: '#4934ad', fontWeight: 700, fontSize: 24 }}>Ingredient Management</h2>
+          <p>View, create, and manage ingredients, allergens, costs, and units of measure.</p>
+        </div>
+      );
+    }
+    function UserAdmin() {
+      return (
+        <div>
+          <h2 style={{ color: '#4934ad', fontWeight: 700, fontSize: 24 }}>User & Role Management</h2>
+          <p>View, create, and manage users, assign roles, and set access levels.</p>
+        </div>
+      );
+    }
+    function AuditAdmin() {
+      return (
+        <div>
+          <h2 style={{ color: '#4934ad', fontWeight: 700, fontSize: 24 }}>Audit & Traceability</h2>
+          <p>View transaction logs, search/filter by order, ingredient, user, or date.</p>
+        </div>
+      );
+    }
+
+    // Main App
+    function App() {
+      const [section, setSection] = React.useState('recipes');
+      return (
+        <AdminShell>
+          <AdminNav section={section} onSection={setSection} />
+          <div style={{ flex: 1, padding: 32, overflow: 'auto' }}>
+            {section === 'recipes' && <RecipeAdmin />}
+            {section === 'orders' && <OrderAdmin />}
+            {section === 'ingredients' && <IngredientAdmin />}
+            {section === 'users' && <UserAdmin />}
+            {section === 'audit' && <AuditAdmin />}
+          </div>
+        </AdminShell>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Mark</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>body{margin:0;padding:18px;background:#fff;font-family:var(--hs-font-sans)}
+.row{display:flex;gap:18px;align-items:center}
+.box{padding:14px;border-radius:10px;border:1px solid var(--hs-border);display:flex;align-items:center;justify-content:center}
+.cap{font-family:var(--hs-font-mono);font-size:11px;color:var(--hs-fg-3);margin-top:6px;text-align:center}
+.watermark{background:var(--hs-bg-alt);position:relative;overflow:hidden;padding:28px 16px;border-radius:10px;border:1px solid var(--hs-border);flex:1}
+.wm-bg{position:absolute;inset:-20px;background-image:url(../assets/hellenic-mark.png);background-repeat:no-repeat;background-position:110% 50%;background-size:220px;opacity:0.1}
+.wm-text{position:relative;font-weight:600;color:var(--hs-midnight);font-size:18px}
+.wm-sub{position:relative;color:var(--hs-fg-2);font-size:13px;margin-top:4px}
+</style></head>
+<body>
+<div class="row">
+  <div><div class="box"><img src="../assets/hellenic-mark.png" style="width:72px;height:72px"></div><div class="cap">Mark — 72px</div></div>
+  <div><div class="box"><img src="../assets/hellenic-mark.png" style="width:36px;height:36px"></div><div class="cap">Mark — 36px</div></div>
+  <div class="watermark">
+    <div class="wm-bg"></div>
+    <div class="wm-text">Icon at 10% transparency</div>
+    <div class="wm-sub">Approved watermark use per brand book</div>
+  </div>
+</div>
+</body></html>

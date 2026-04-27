@@ -13,6 +13,7 @@ Discovery and specification artefacts for the Formix/FOPS Recipe System modernis
 | [05-capability-map.md](05-capability-map.md) | Core/supporting capabilities, dependencies, complexity areas |
 | [06-mvp-scope.md](06-mvp-scope.md) | MVP scope definition — Tier 1/2/3 split, removals, risks |
 | [07-subscription-tiers.md](07-subscription-tiers.md) | Subscription tier proposal — Essentials / Professional / Enterprise |
+| [08-technical-architecture.md](08-technical-architecture.md) | Technical architecture decisions, NFRs, risks, and assumptions |
 
 ## Status
 
@@ -20,4 +21,4 @@ Discovery and specification artefacts for the Formix/FOPS Recipe System modernis
 - **Capability mapping:** Complete
 - **All open questions:** Answered (2026-04-20)
 - **MVP shaping:** Complete (2026-04-20)
-- **Modernisation considerations:** Not started
+- **Technical architecture:** Complete (2026-04-23) — risks under offline review

@@ -1,0 +1,13 @@
+{
+  "name": "hellenic-admin-prototype",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Interactive prototype for Hellenic Recipe Management Admin App, structured for future backend integration.",
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "scripts": {
+    "start": "npx serve ."
+  }
+}

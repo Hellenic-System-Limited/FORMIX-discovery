@@ -1,0 +1,23 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Buttons</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>body{margin:0;padding:20px;background:#fff;font-family:var(--hs-font-sans);color:var(--hs-fg-1)}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
+.btn{font-family:var(--hs-font-sans);font-weight:600;font-size:15px;border-radius:10px;padding:10px 18px;border:1px solid transparent;cursor:pointer;transition:all 180ms var(--hs-ease)}
+.btn-primary{background:#122559;color:#fff}
+.btn-primary:hover{background:#0e1d46}
+.btn-cta{background:#d4245c;color:#fff}
+.btn-cta:hover{background:#b31a4c}
+.btn-outline{background:#fff;color:#122559;border-color:#dde1ec}
+.btn-outline:hover{border-color:#c3c9db;background:#f6f7fb}
+.btn-ghost{background:transparent;color:#4934ad}
+.btn-ghost:hover{background:#eeeafa}
+.btn-disabled{background:#122559;color:#fff;opacity:.4;cursor:not-allowed}
+.btn-sm{padding:6px 12px;font-size:13px;border-radius:8px}
+.btn-lg{padding:14px 24px;font-size:17px}
+.lbl{font-family:var(--hs-font-mono);font-size:10px;color:var(--hs-fg-3);width:76px}
+</style></head>
+<body>
+<div class="row"><span class="lbl">primary</span><button class="btn btn-primary">Start order</button><button class="btn btn-primary btn-sm">Start</button><button class="btn btn-primary btn-lg">Confirm mix</button><button class="btn btn-disabled">Disabled</button></div>
+<div class="row"><span class="lbl">cta · pink</span><button class="btn btn-cta">Print label</button><span style="font-size:12px;color:var(--hs-fg-3)">reserved for impact — 10%</span></div>
+<div class="row"><span class="lbl">outline</span><button class="btn btn-outline">Cancel</button><span class="lbl">ghost</span><button class="btn btn-ghost">Skip step</button></div>
+</body></html>

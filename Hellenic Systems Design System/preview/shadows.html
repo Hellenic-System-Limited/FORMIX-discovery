@@ -1,0 +1,16 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Shadows</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>body{margin:0;padding:24px;background:var(--hs-bg-alt);font-family:var(--hs-font-sans)}
+.row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{background:#fff;height:90px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:var(--hs-font-mono);font-size:11px;color:var(--hs-fg-2)}
+.xs{box-shadow:var(--hs-shadow-xs)}.sm{box-shadow:var(--hs-shadow-sm)}
+.md{box-shadow:var(--hs-shadow-md)}.lg{box-shadow:var(--hs-shadow-lg)}
+</style></head>
+<body>
+<div class="row">
+  <div class="card xs">shadow-xs</div>
+  <div class="card sm">shadow-sm</div>
+  <div class="card md">shadow-md · default</div>
+  <div class="card lg">shadow-lg · modal</div>
+</div>
+</body></html>

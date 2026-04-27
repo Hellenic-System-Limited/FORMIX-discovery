@@ -1,0 +1,17 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Semantic colors</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>body{margin:0;padding:20px;font-family:var(--hs-font-sans);background:#fff}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.chip{border-radius:10px;padding:14px;min-height:90px;display:flex;flex-direction:column;gap:6px}
+.name{font-weight:600;font-size:13px;letter-spacing:-0.01em}
+.hex{font-family:var(--hs-font-mono);font-size:11px;opacity:.8}
+.pill{align-self:flex-start;padding:3px 10px;border-radius:999px;font-size:11px;font-weight:600}
+</style></head>
+<body>
+<div class="grid">
+  <div class="chip" style="background:#e4f4ec;color:#1f8a5a"><div class="name">Success</div><div class="hex">#1f8a5a · bg #e4f4ec</div><span class="pill" style="background:#1f8a5a;color:#fff">complete</span></div>
+  <div class="chip" style="background:#fdf0dc;color:#b25b00"><div class="name">Warning</div><div class="hex">#b25b00 · bg #fdf0dc</div><span class="pill" style="background:#b25b00;color:#fff">near tolerance</span></div>
+  <div class="chip" style="background:#fbdce6;color:#d4245c"><div class="name">Danger</div><div class="hex">#d4245c · bg #fbdce6</div><span class="pill" style="background:#d4245c;color:#fff">out of tolerance</span></div>
+  <div class="chip" style="background:#eeeafa;color:#4934ad"><div class="name">Info</div><div class="hex">#4934ad · bg #eeeafa</div><span class="pill" style="background:#4934ad;color:#fff">in progress</span></div>
+</div>
+</body></html>

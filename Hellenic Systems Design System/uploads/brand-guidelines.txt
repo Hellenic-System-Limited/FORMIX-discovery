@@ -1,0 +1,228 @@
+Brand
+Guidelines
+
+-- 1 of 16 --
+
+Index
+1. Introduction
+2. Logo
+3. Colour
+4. Typography
+
+-- 2 of 16 --
+
+Introduction
+01 Our identity
+Tone of voice
+Key messages, words & phrases
+
+-- 3 of 16 --
+
+Our identity
+At Hellenic Systems, we’ve been driving progress in the
+food and manufacturing industry since 1988. As a UK-
+based and owned business, we design and manufacture
+specialist computer systems that are trusted by over 130
+companies across the UK and Europe.
+Our identity is built on a combination of innovation and
+integrity. We’re known for delivering high-performance,
+adaptable software solutions that blend standardised
+modules with bespoke system design — ensuring a
+perfect fit for every customer. Whether supporting niche
+operations or scaling across large manufacturing sites,
+our systems are shaped by the specific needs of each
+business we serve.
+What sets us apart is our ability to combine a flexible,
+forward-thinking approach with the rock-solid reliability
+and performance the industry demands. We never take
+a one-size-fits-all view. Instead, we draw on decades of
+sector experience to develop future-ready technology
+rooted in the values that have shaped us from the
+very beginning.
+
+-- 4 of 16 --
+
+Tone of voice
+• We write in plain English, making complex ideas easy
+to understand.
+• We tailor our tone to suit the audience — more direct
+and concise for technical users, more conversational
+for general communication.
+• We use first person (“we” and “you”) to make our
+messages feel personal and engaging.
+Formal
+Cold
+Serious
+Complex 	Simple
+Casual
+Warm
+Playful
+Our tone of voice is clear, confident, and approachable.
+We’re experts in our field, but we keep things simple
+and straightforward. Whether we’re writing technical
+documentation, speaking with customers, or creating
+marketing content, we aim to communicate with clarity
+and purpose.
+We aim for a tone that’s friendly and professional, which
+in practice means:
+
+-- 5 of 16 --
+
+Key messages, words
+& phrases
+This page captures the core messages and
+vocabulary that define how we speak about
+Hellenic Systems. Whether you’re writing
+a brochure, a website page, or an email,
+these words and themes help keep our
+communication consistent, clear and on-brand.
+These are the recurring ideas we want
+people to remember about us. Everything we
+communicate should reinforce one or more
+of these.
+• Built around you.
+• Empowering food and manufacturing
+innovators with smart, scalable technology -
+designed for today, built for tomorrow.
+• Delivering complete traceability throughout
+your manufacturing operation.
+We believe every manufacturer deserves
+technology that adapts to their processes -
+not the other way around.
+Messaging pillars
+Reliability
+Software you can count on, day in, day out.
+Innovation
+Always evolving to meet tomorrow’s challenges.
+Customisation
+Tailored systems built around you.
+Traceability
+Full visibility of your processes from start to finish.
+Expert support
+UK-based team with proven industry knowledge.
+
+-- 6 of 16 --
+
+Our logo
+Logo Mark
+Clear Space
+Logo
+02
+
+-- 7 of 16 --
+
+Our Logo
+Primary use:
+Full colour on a white background.
+Secondary use:
+White on dark/coloured backgrounds.
+
+-- 8 of 16 --
+
+Icon
+Use the icon on its own when the area is very
+small, on a profile picture or on social media
+for example.
+The icon can used with a 10% transparency where
+appropriate across collaterals to enhance the brand.
+
+-- 9 of 16 --
+
+Clear Space 	Do not
+Our logo needs space to allow it to stand out. Putting
+the logo too close to borders, text and other assets
+compromises the overall aesthetics. The minimum clear
+space is derived from the width of our logo mark.
+Do not reduce the logo in size below 20 mm wide
+for print or 100 px for digital applications.
+Do not distort or apply filters to the logo.
+
+-- 10 of 16 --
+
+03 Colour palette
+Gradient
+Colour proportion
+Colour
+
+-- 11 of 16 --
+
+Colour Palette
+C: 100 	M: 90 Y: 38 	K: 28
+R: 18 G: 37 B: 89
+Hex: #122559
+C:87 	M: 82 Y: 0 	K: 0
+R: 73 G: 52 	B: 173
+Hex: #4934ad
+C: 10 	M: 95 	Y: 41 	K: 2
+R: 212 G: 36 B: 92
+Hex: #d4245c
+Our core colour palette reflects the balance between
+trusted legacy and future-focused innovation - the
+essence of what Hellenic Systems stands for.
+Deep and dependable, our midnight blue anchors the
+brand. It represents our heritage, technical expertise, and
+the reliability our customers depend on. It’s a confident,
+professional colour that conveys trust, precision, and
+long-term performance - all essential in the food and
+manufacturing sectors we serve.
+The vibrant purple expresses the forward-thinking, tech-
+driven side of Hellenic Systems, while the energetic pink
+captures our proactive mindset and responsiveness to
+customer needs. Used strategically, the pink highlights
+key calls to action and moments of impact across our
+communications.
+Together, these colours give us a versatile and distinctive
+visual language - grounded in expertise, powered by
+innovation, and always human.
+
+-- 12 of 16 --
+
+Hellenic Gradient
+The gradient should be used as a design feature to
+elevate the artwork and establish brand recognition.
+The dark blue should take about 45% of the space,
+the purple 35% and the pink 20%
+#122559 	#4934ad 	#d4245c
+
+-- 13 of 16 --
+
+Apply a 60-30-10 rule for proportioning colour.
+60% dominant colour is white
+30% is either dark blue or purple
+10% is our pink accent colour
+60%
+10%
+30%
+Colour proportion
+
+-- 14 of 16 --
+
+04
+Typography
+Type font
+Tracking and kerning
+
+-- 15 of 16 --
+
+Type Font
+Our type font is Figtree.
+The regular variation should be used for body copy.
+The semibold variation should be used for titles and
+highlighted text where necessary.
+Regular
+ABCDEFGHIJKLM
+NOPQRSTUVWXYZ
+abcdefghijklm
+nopqrstuvwxyz
+1234567890?/@£$%&
+A 	A
+Semi Bold
+ABCDEFGHIJKLM
+NOPQRSTUVWXYZ
+abcdefghijklm
+nopqrstuvwxyz
+1234567890?/@£$%&
+Figtree
+
+-- 16 of 16 --
+
