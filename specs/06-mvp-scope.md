@@ -15,11 +15,16 @@
 
 ---
 
+
 ## In Scope — MVP Must-Have
 
-The system cannot ship without these. This is the minimum viable replacement for the existing Formix system.
+The system cannot ship without these. This is the minimum viable replacement for the existing Formix system. (Updated: API integration and recipe versioning are now MVP-essential.)
+
 
 ### Core Weighing Workflow
+| Ref | Capability | Justification |
+|---|---|---|
+| S2/N1 | Formix-owned API for ERP/FOPS data sync | Required for MVP — anticipated that most MVP customers are existing FOPS users and require integration from day one. Architectural foundation for all deployments. |
 
 | Ref | Capability | Justification |
 |---|---|---|
@@ -34,7 +39,11 @@ The system cannot ship without these. This is the minimum viable replacement for
 | C9 | Transaction recording (core traceability artefact) | Core — every ingredient weighing produces a transaction record. This is the fundamental data capture that all reporting, compliance, and audit depends on. |
 | C13 | Auto-advance to next scheduled mix on completion | Core operator efficiency — operators should not have to manually select the next mix. Existing behaviour that customers rely on. |
 
+
 ### Quality & Compliance
+| Ref | Capability | Justification |
+|---|---|---|
+| N16 | Recipe versioning | Now MVP-essential — required for compliance and traceability. Ensures all transaction records reference an immutable recipe snapshot. |
 
 | Ref | Capability | Justification |
 |---|---|---|
@@ -67,16 +76,17 @@ The system cannot ship without these. This is the minimum viable replacement for
 
 ---
 
+
 ## Should-Have — Target for First Release After MVP
 
 High value. MVP is weaker without these but can technically ship. These are the first priorities for post-MVP delivery.
 
 | Ref | Capability | Justification for Deferral |
 |---|---|---|
-| S2/N1 | Formix-owned API for ERP/FOPS data sync | Formix can operate standalone without FOPS integration. API is architecturally important but not required for a site to start weighing. FOPS-dependent sites adopt once API ships. |
 | N5/S10 | Order amendment from terminal (with authorisation) | Existing "immutable orders" workflow works — just less efficient. Planners can still manage orders centrally. Deliberate design change that needs careful authorisation model. |
 
 ---
+
 
 ## Not in Scope — Post-MVP
 
@@ -93,7 +103,6 @@ Explicitly deferred. Design should not preclude these but they are out of scope 
 | N13 | FOPS Web integration (as API consumer) | Depends on API (S2) shipping first. FOPS Web is a consumer of the Formix-owned API — not a separate integration effort. |
 | N14 | Digital reporting sheets (replacing paper) | New capability. Awaiting Claire's template for existing paper reports. Cannot scope without that input. |
 | N15 | Network-based scales | Confirmed aspirational. Serial RS232 is sufficient for MVP. Network scale support reduces hardware dependency but is not required for any current deployment. |
-| N16 | Recipe versioning | Confirmed very high on the nice-to-have list. Currently recipes are edited in place. **Design must not preclude adding versioning later** — e.g. transaction records should reference a recipe snapshot, not a mutable recipe. |
 | S9 | Full localisation (per-user language from broader set) | Visual-first UI design helps operators with limited English. Full i18n (per-user language selection) is an incremental addition. Not blocking any current deployment. |
 
 ---
