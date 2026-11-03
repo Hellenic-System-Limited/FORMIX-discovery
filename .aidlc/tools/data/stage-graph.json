@@ -32,14 +32,6 @@
       {
         "path": "aidlc/spaces/default/memory/org.md",
         "scope": "org"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/team.md",
-        "scope": "team"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/project.md",
-        "scope": "project"
       }
     ],
     "sensors_applicable": []
@@ -79,14 +71,6 @@
       {
         "path": "aidlc/spaces/default/memory/org.md",
         "scope": "org"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/team.md",
-        "scope": "team"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/project.md",
-        "scope": "project"
       }
     ],
     "sensors_applicable": []
@@ -126,14 +110,6 @@
       {
         "path": "aidlc/spaces/default/memory/org.md",
         "scope": "org"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/team.md",
-        "scope": "team"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/project.md",
-        "scope": "project"
       }
     ],
     "sensors_applicable": []
@@ -179,14 +155,6 @@
       {
         "path": "aidlc/spaces/default/memory/org.md",
         "scope": "org"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/team.md",
-        "scope": "team"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/project.md",
-        "scope": "project"
       },
       {
         "path": "aidlc/spaces/default/memory/phases/ideation.md",
@@ -260,14 +228,6 @@
       {
         "path": "aidlc/spaces/default/memory/org.md",
         "scope": "org"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/team.md",
-        "scope": "team"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/project.md",
-        "scope": "project"
       },
       {
         "path": "aidlc/spaces/default/memory/phases/ideation.md",
@@ -352,14 +312,6 @@
         "scope": "org"
       },
       {
-        "path": "aidlc/spaces/default/memory/team.md",
-        "scope": "team"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/project.md",
-        "scope": "project"
-      },
-      {
         "path": "aidlc/spaces/default/memory/phases/ideation.md",
         "scope": "phase"
       }
@@ -436,14 +388,6 @@
         "scope": "org"
       },
       {
-        "path": "aidlc/spaces/default/memory/team.md",
-        "scope": "team"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/project.md",
-        "scope": "project"
-      },
-      {
         "path": "aidlc/spaces/default/memory/phases/ideation.md",
         "scope": "phase"
       }
@@ -515,14 +459,6 @@
       {
         "path": "aidlc/spaces/default/memory/org.md",
         "scope": "org"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/team.md",
-        "scope": "team"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/project.md",
-        "scope": "project"
       },
       {
         "path": "aidlc/spaces/default/memory/phases/ideation.md",
@@ -603,14 +539,6 @@
       {
         "path": "aidlc/spaces/default/memory/org.md",
         "scope": "org"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/team.md",
-        "scope": "team"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/project.md",
-        "scope": "project"
       },
       {
         "path": "aidlc/spaces/default/memory/phases/ideation.md",
@@ -715,14 +643,6 @@
         "scope": "org"
       },
       {
-        "path": "aidlc/spaces/default/memory/team.md",
-        "scope": "team"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/project.md",
-        "scope": "project"
-      },
-      {
         "path": "aidlc/spaces/default/memory/phases/ideation.md",
         "scope": "phase"
       }
@@ -795,14 +715,6 @@
       {
         "path": "aidlc/spaces/default/memory/org.md",
         "scope": "org"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/team.md",
-        "scope": "team"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/project.md",
-        "scope": "project"
       },
       {
         "path": "aidlc/spaces/default/memory/phases/inception.md",
@@ -903,14 +815,6 @@
       {
         "path": "aidlc/spaces/default/memory/org.md",
         "scope": "org"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/team.md",
-        "scope": "team"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/project.md",
-        "scope": "project"
       },
       {
         "path": "aidlc/spaces/default/memory/phases/inception.md",
@@ -1020,14 +924,6 @@
         "scope": "org"
       },
       {
-        "path": "aidlc/spaces/default/memory/team.md",
-        "scope": "team"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/project.md",
-        "scope": "project"
-      },
-      {
         "path": "aidlc/spaces/default/memory/phases/inception.md",
         "scope": "phase"
       }
@@ -1117,14 +1013,6 @@
       {
         "path": "aidlc/spaces/default/memory/org.md",
         "scope": "org"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/team.md",
-        "scope": "team"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/project.md",
-        "scope": "project"
       },
       {
         "path": "aidlc/spaces/default/memory/phases/inception.md",
@@ -1226,14 +1114,6 @@
         "scope": "org"
       },
       {
-        "path": "aidlc/spaces/default/memory/team.md",
-        "scope": "team"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/project.md",
-        "scope": "project"
-      },
-      {
         "path": "aidlc/spaces/default/memory/phases/inception.md",
         "scope": "phase"
       }
@@ -1326,14 +1206,6 @@
       {
         "path": "aidlc/spaces/default/memory/org.md",
         "scope": "org"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/team.md",
-        "scope": "team"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/project.md",
-        "scope": "project"
       },
       {
         "path": "aidlc/spaces/default/memory/phases/inception.md",
@@ -1431,14 +1303,6 @@
         "scope": "org"
       },
       {
-        "path": "aidlc/spaces/default/memory/team.md",
-        "scope": "team"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/project.md",
-        "scope": "project"
-      },
-      {
         "path": "aidlc/spaces/default/memory/phases/inception.md",
         "scope": "phase"
       }
@@ -1528,14 +1392,6 @@
       {
         "path": "aidlc/spaces/default/memory/org.md",
         "scope": "org"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/team.md",
-        "scope": "team"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/project.md",
-        "scope": "project"
       },
       {
         "path": "aidlc/spaces/default/memory/phases/inception.md",
@@ -1639,14 +1495,6 @@
       {
         "path": "aidlc/spaces/default/memory/org.md",
         "scope": "org"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/team.md",
-        "scope": "team"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/project.md",
-        "scope": "project"
       },
       {
         "path": "aidlc/spaces/default/memory/phases/inception.md",
@@ -1777,14 +1625,6 @@
       {
         "path": "aidlc/spaces/default/memory/org.md",
         "scope": "org"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/team.md",
-        "scope": "team"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/project.md",
-        "scope": "project"
       },
       {
         "path": "aidlc/spaces/default/memory/phases/construction.md",
@@ -1927,14 +1767,6 @@
       {
         "path": "aidlc/spaces/default/memory/org.md",
         "scope": "org"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/team.md",
-        "scope": "team"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/project.md",
-        "scope": "project"
       },
       {
         "path": "aidlc/spaces/default/memory/phases/construction.md",
@@ -2090,14 +1922,6 @@
       {
         "path": "aidlc/spaces/default/memory/org.md",
         "scope": "org"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/team.md",
-        "scope": "team"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/project.md",
-        "scope": "project"
       },
       {
         "path": "aidlc/spaces/default/memory/phases/construction.md",
@@ -2261,14 +2085,6 @@
         "scope": "org"
       },
       {
-        "path": "aidlc/spaces/default/memory/team.md",
-        "scope": "team"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/project.md",
-        "scope": "project"
-      },
-      {
         "path": "aidlc/spaces/default/memory/phases/construction.md",
         "scope": "phase"
       }
@@ -2407,14 +2223,6 @@
         "scope": "org"
       },
       {
-        "path": "aidlc/spaces/default/memory/team.md",
-        "scope": "team"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/project.md",
-        "scope": "project"
-      },
-      {
         "path": "aidlc/spaces/default/memory/phases/construction.md",
         "scope": "phase"
       }
@@ -2503,14 +2311,6 @@
         "scope": "org"
       },
       {
-        "path": "aidlc/spaces/default/memory/team.md",
-        "scope": "team"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/project.md",
-        "scope": "project"
-      },
-      {
         "path": "aidlc/spaces/default/memory/phases/construction.md",
         "scope": "phase"
       }
@@ -2594,14 +2394,6 @@
       {
         "path": "aidlc/spaces/default/memory/org.md",
         "scope": "org"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/team.md",
-        "scope": "team"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/project.md",
-        "scope": "project"
       },
       {
         "path": "aidlc/spaces/default/memory/phases/construction.md",
@@ -2704,14 +2496,6 @@
         "scope": "org"
       },
       {
-        "path": "aidlc/spaces/default/memory/team.md",
-        "scope": "team"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/project.md",
-        "scope": "project"
-      },
-      {
         "path": "aidlc/spaces/default/memory/phases/operation.md",
         "scope": "phase"
       }
@@ -2784,14 +2568,6 @@
       {
         "path": "aidlc/spaces/default/memory/org.md",
         "scope": "org"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/team.md",
-        "scope": "team"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/project.md",
-        "scope": "project"
       },
       {
         "path": "aidlc/spaces/default/memory/phases/operation.md",
@@ -2878,14 +2654,6 @@
       {
         "path": "aidlc/spaces/default/memory/org.md",
         "scope": "org"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/team.md",
-        "scope": "team"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/project.md",
-        "scope": "project"
       },
       {
         "path": "aidlc/spaces/default/memory/phases/operation.md",
@@ -2977,14 +2745,6 @@
         "scope": "org"
       },
       {
-        "path": "aidlc/spaces/default/memory/team.md",
-        "scope": "team"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/project.md",
-        "scope": "project"
-      },
-      {
         "path": "aidlc/spaces/default/memory/phases/operation.md",
         "scope": "phase"
       }
@@ -3065,14 +2825,6 @@
       {
         "path": "aidlc/spaces/default/memory/org.md",
         "scope": "org"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/team.md",
-        "scope": "team"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/project.md",
-        "scope": "project"
       },
       {
         "path": "aidlc/spaces/default/memory/phases/operation.md",
@@ -3157,14 +2909,6 @@
       {
         "path": "aidlc/spaces/default/memory/org.md",
         "scope": "org"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/team.md",
-        "scope": "team"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/project.md",
-        "scope": "project"
       },
       {
         "path": "aidlc/spaces/default/memory/phases/operation.md",
@@ -3257,14 +3001,6 @@
       {
         "path": "aidlc/spaces/default/memory/org.md",
         "scope": "org"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/team.md",
-        "scope": "team"
-      },
-      {
-        "path": "aidlc/spaces/default/memory/project.md",
-        "scope": "project"
       },
       {
         "path": "aidlc/spaces/default/memory/phases/operation.md",

@@ -1,10 +1,12 @@
 # AI-DLC v2.11.2
 
-The active implementation is the official GitHub Copilot runtime from
+The active implementation uses the official GitHub Copilot and Claude Code runtimes from
 [awslabs/aidlc-workflows v2.11.2](https://github.com/awslabs/aidlc-workflows/tree/v2.11.2)
 (commit `10a9bc9d85395a601de2624cf5bdd35292c10db4`).
-Follow the managed onboarding in [AGENTS.md](../AGENTS.md) and invoke `/aidlc`.
-The runtime is in `.aidlc/`, Copilot integrations are in `.github/`, and shared
+Follow the managed onboarding in [AGENTS.md](../AGENTS.md) for Copilot or
+[.claude/CLAUDE.md](../.claude/CLAUDE.md) for Claude Code and invoke `/aidlc`.
+Copilot's engine is in `.aidlc/` with integrations in `.github/`; Claude Code's
+runtime and settings are in `.claude/`. Both harnesses share
 workspace memory is in `aidlc/spaces/default/memory/`.
 
 The former workflow is archived unchanged in
@@ -29,11 +31,17 @@ replace `<runtime-root>` below with the extracted `runtime` directory:
 bun .aidlc\tools\aidlc.ts config --from "<runtime-root>" --harness copilot --dry-run
 bun .aidlc\tools\aidlc.ts config --from "<runtime-root>" --harness copilot
 bun .aidlc\tools\aidlc.ts doctor
+bun .claude\tools\aidlc.ts config --from "<runtime-root>" --harness claude --dry-run
+bun .claude\tools\aidlc.ts config --from "<runtime-root>" --harness claude
+bun .claude\tools\aidlc.ts engine graph compile
+bun .claude\tools\aidlc.ts engine graph compile --check
+bun .claude\tools\aidlc.ts doctor
 ```
 
 Keep custom project rules outside framework-owned files, in
 `aidlc/spaces/default/memory/project.md`. Review configurator conflicts rather
-than using `--force`.
+than using `--force`. Install the Claude Code CLI separately to use that harness;
+the copy runtime does not install harness CLIs.
 
 Copilot CLI must trust the checkout before hooks run; start a new interactive
 session and accept the trust prompt only after reviewing the repository.
